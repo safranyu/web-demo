@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>锤子官网首页</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body,
+			html {
+				width: 100%;
+				height: 100%;
+			}
+			
+			header {
+				width: 100%;
+				height: 190px;
+				background-color: #1a1a1a;
+				position: relative;
+			}
+			
+			header nav {
+				width: 1220px;
+				height: 100px;
+				margin: 0 auto;
+				padding-top: 20px;
+				box-sizing: border-box;
+				position: relative;
+			}
+			
+			header nav>span {
+				display: block;
+				width: 50px;
+				height: 50px;
+				overflow: hidden;
+				transform: translateY(5px);
+				float: left;
+			}
+			
+			header nav>span>img {
+				width: 50px;
+			}
+			
+			header nav>div {
+				width: 720px;
+				height: 50px;
+				line-height: 50px;
+				margin-left: 200px;
+				position: relative;
+			}
+			
+			header nav>div>a {
+				text-decoration: none;
+				margin-left: 30px;
+				font-size: 16px;
+				color: darkgrey;
+				float: left;
+			}
+			
+			header nav>div>a:nth-of-type(1) {
+				color: white;
+			}
+			
+			header nav>div>a:hover {
+				color: white;
+			}
+			
+			header nav>div>span {
+				display: block;
+				width: 1px;
+				height: 20px;
+				background-color: grey;
+				float: left;
+				position: relative;
+				top: 17px;
+				left: 50px;
+			}
+			
+			header .shop {
+				width: 100px;
+				height: 30px;
+				position: absolute;
+				right: 30px;
+				top: 15px;
+			}
+			
+			header .shop>span {
+				display: block;
+				width: 22px;
+				height: 22px;
+				overflow: hidden;
+				float: left;
+				background-color: rgba(1, 1, 1, 0);
+			}
+			
+			header .shop>span:nth-of-type(1)>img {
+				transform: translateX(-63px);
+			}
+			
+			header .shop>span:nth-of-type(2)>img {
+				transform: translate(-63px, -20px);
+			}
+			
+			header .shop>span:nth-of-type(2) {
+				margin-left: 30px;
+				width: 25px;
+			}
+			
+			header .shop>div {
+				position: relative;
+				top: 50px;
+				left: -160px;
+				width: 290px;
+				height: 300px;
+				border-radius: 10px;
+				background-color: honeydew;
+				display: none;
+				z-index: 10;
+			}
+			
+			header .shop>div>img {
+				position: relative;
+				top: 80px;
+				left: 35px;
+			}
+			
+			header .shop>div>p1 {
+				position: relative;
+				top: 120px;
+				left: -50px;
+				font-size: 18px;
+			}
+			
+			header .shop>div>p2 {
+				display: block;
+				width: 250px;
+				height: 30px;
+				position: relative;
+				top: 130px;
+				left: 20px;
+				font-size: 11px;
+				color: gray;
+				text-align: center;
+				line-height: 30px;
+			}
+			
+			header .shop:hover>div {
+				display: block;
+			}
+			
+			header .header_bot {
+				width: 100%;
+				height: 90px;
+				background-color: gainsboro;
+			}
+			
+			header .header_bot>ul {
+				width: 1220px;
+				height: 100px;
+				margin: 0 auto;
+			}
+			
+			header .header_bot>ul>li {
+				list-style: none;
+				margin-left: 20px;
+				display: inline-block;
+				margin-top: 40px;
+				box-sizing: border-box;
+			}
+			
+			header .header_bot>ul>li:nth-child(1) {
+				margin-left: 0px;
+			}
+			
+			header .header_bot>ul>li>a {
+				text-decoration: none;
+				color: darkolivegreen;
+			}
+			
+			header .header_bot>ul>li>span {
+				display: block;
+				width: 2px;
+				height: 2px;
+				background-color: darkgrey;
+				border-radius: 2px;
+				float: left;
+				margin-top: 10px;
+				margin-right: 20px;
+			}
+			
+			header .header_bot>ul>li:hover a {
+				color: cadetblue;
+			}
+			
+			section {
+				width: 100%;
+				height: 6270px;
+				background-color: gainsboro;
+			}
+			
+			section .centain {
+				width: 1220px;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			section .centain .central {
+				height: 410px;
+				margin-bottom: 100px;
+				border-radius: 10px;
+				position: relative;
+			}
+			
+			section .centain .central .moon {
+				position: relative;
+			}
+			
+			section .centain .central .moon>li {
+				position: absolute;
+				top: 0px;
+				left: 0;
+				display: inline-block;
+				width: 1220px;
+				height: 460px;
+				list-style: none;
+				float: left;
+				border-radius: 10px;
+				overflow: hidden;
+			}
+			
+			section .centain .central .moon>li>img {
+				position: absolute;
+				width: 1220px;
+				height: 460px;
+			}
+			
+			section .centain .central .moon>li>img:nth-of-type(2) {
+				z-index: 2;
+			}
+			
+			section .centain .central .moon>li>img:nth-of-type(3) {
+				z-index: 3;
+			}
+			
+			section .centain .central .doc-lis {
+				position: absolute;
+				z-index: 4;
+				bottom: 10px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			
+			section .centain .central .doc-lis>li {
+				display: inline-block;
+				float: left;
+				list-style: none;
+				width: 10px;
+				height: 10px;
+				border-radius: 10px;
+				margin-left: 10px;
+				background-color: grey;
+			}
+			
+			section .centain .purify {
+				height: 200px;
+				margin-bottom: 30px;
+				border-radius: 5px;
+			}
+			
+			section .centain .purify>ul>li {
+				list-style: none;
+				display: inline-block;
+				width: 303px;
+				height: 198px;
+				float: left;
+				border: 1px solid gainsboro;
+				position: relative;
+			}
+			
+			section .centain .purify>ul>li>img {
+				width: 303px;
+				height: 198px;
+				position: absolute;
+				tab-size: 0;
+				left: 0;
+			}
+			
+			section .centain .purify>ul>li>div {
+				width: 303px;
+				height: 198px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			
+			section .centain .purify>ul>li:nth-child(1)>img {
+				border-bottom-left-radius: 8px;
+				border-top-left-radius: 8px;
+			}
+			
+			section .centain .purify>ul>li:hover>div {
+				box-shadow: 1px 1px 50px #999 inset;
+				display: block;
+			}
+			
+			section .centain .purify>ul>li:nth-child(4)>img {
+				border-bottom-right-radius: 8px;
+				border-top-right-radius: 8px;
+			}
+			
+			section .centain .hot_shop {
+				height: 490px;
+				border-radius: 8px;
+				background-color: white;
+				border: 1px solid gainsboro;
+				margin-bottom: 30px;
+			}
+			
+			section .centain .hot_shop>h2 {
+				height: 60px;
+				font-weight: normal;
+				font-size: 20px;
+				line-height: 60px;
+				margin-left: 20px;
+				color: dimgray;
+			}
+			
+			section .centain .hot_shop>ul {
+				height: 430px;
+			}
+			
+			section .centain .hot_shop>ul>li {
+				height: 428px;
+				width: 302.5px;
+				list-style: none;
+				display: inline-block;
+				float: left;
+				border: 1px solid gainsboro;
+				position: relative;
+			}
+			
+			section .centain .hot_shop>ul>li>span {
+				display: block;
+				height: 70px;
+			}
+			
+			section .centain .hot_shop>ul>li>img {
+				position: relative;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			
+			section .centain .hot_shop>ul>li>span:nth-of-type(2) {
+				height: 20px;
+				background-color: darkgoldenrod;
+				margin-bottom: 15px;
+			}
+			
+			section .centain .hot_shop>ul>li>h3 {
+				font-weight: normal;
+				text-align: center;
+				font-size: 17px;
+				margin-bottom: 8px;
+			}
+			
+			section .centain .hot_shop>ul>li>p {
+				text-align: center;
+				font-size: 10px;
+				color: red;
+				margin-bottom: 20px;
+			}
+			
+			section .centain .hot_shop>ul>li:nth-of-type(1)>p {
+				color: dimgray;
+			}
+			
+			section .centain .hot_shop>ul>li>h4 {
+				font-weight: normal;
+				text-align: center;
+				font-size: 20px;
+				color: red;
+			}
+			
+			section .centain .hot_shop>ul>li>div {
+				width: 180px;
+				height: 30px;
+				position: absolute;
+				bottom: 20px;
+				left: 50px;
+				background-color: white;
+				display: none;
+				margin-left: 10px;
+			}
+			
+			section .centain .hot_shop>ul>li>div>input {
+				width: 80px;
+				height: 30px;
+				border: none;
+				border: 1px solid darkgrey;
+				border-radius: 5px;
+				text-align: center;
+				line-height: 30px;
+				font-size: 10px;
+			}
+			
+			section .centain .hot_shop>ul>li>div>input:nth-child(2) {
+				width: 95px;
+				background-color: darkblue;
+				color: white;
+				border: none;
+			}
+			
+			section .centain .hot_shop>ul>li:nth-child(3)>div>input {
+				margin-left: 50px;
+			}
+			
+			section .centain .hot_shop>ul>li:hover {
+				box-shadow: 1px 1px 50px #999 inset;
+			}
+			
+			section .centain .hot_shop>ul>li:hover div {
+				display: block;
+			}
+			
+			section .centain .hot_shop>ul>li>div>input:nth-child(1):hover {
+				background-color: grey;
+			}
+			
+			section .centain .hot_shop>ul>li>div>input:nth-child(2):hover {
+				background-color: midnightblue;
+			}
+			
+			section .centain .p_fittings {
+				height: 920px;
+				border-radius: 10px;
+				margin-bottom: 30px;
+				background-color: white;
+				position: relative;
+			}
+			
+			section .centain .p_fittings>span,
+			.official_selection>span,
+			.surrounding_shop>span,
+			.brand_choice>span {
+				display: block;
+				height: 60px;
+			}
+			
+			section .centain .p_fittings>span>h3,
+			section .centain .official_selection>span>h3,
+			section .centain .surrounding_shop>span>h3,
+			section .centain .brand_choice>span>h3 {
+				font-weight: normal;
+				line-height: 60px;
+				margin-left: 30px;
+			}
+			
+			section .centain .p_fittings>img,
+			section .centain .official_selection>img,
+			section .centain .surrounding_shop>img,
+			section .centain .brand_choice>img {
+				width: 608px;
+				height: 430px;
+				border: 1px solid gainsboro;
+				float: left;
+			}
+			
+			section .centain .p_fittings>ul>li,
+			section .centain .official_selection>ul>li,
+			section .centain .surrounding_shop>ul>li,
+			section .centain .brand_choice>ul>li {
+				list-style: none;
+				display: inline-block;
+				float: left;
+				width: 303px;
+				height: 430px;
+				background-color: white;
+				border: 1px solid gainsboro;
+				position: relative;
+			}
+			
+			section .centain .p_fittings>ul,
+			section .centain .official_selection>ul,
+			section .centain .surrounding_shop>ul,
+			section .centain .brand_choice>ul {
+				position: relative;
+			}
+			
+			section .centain .p_fittings>ul>li>span,
+			section .centain .official_selection>ul>li>span,
+			section .centain .surrounding_shop>ul>li>span,
+			section .centain .brand_choice>ul>li>span {
+				display: block;
+				height: 70px;
+			}
+			
+			section .centain .p_fittings>ul>li>img,
+			section .centain .official_selection>ul>li>img,
+			section .centain .surrounding_shop>ul>li>img,
+			section .centain .brand_choice>ul>li>img {
+				width: 230px;
+				height: 200px;
+				position: relative;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			
+			section .centain .p_fittings>ul>li>span:nth-of-type(2),
+			section .centain .official_selection>ul>li>span:nth-of-type(2),
+			section .centain .surrounding_shop>ul>li>span:nth-of-type(2),
+			section .centain .brand_choice>ul>li>span:nth-of-type(2) {
+				height: 20px;
+				background-color: darkgoldenrod;
+				margin-bottom: 15px;
+			}
+			
+			section .centain .p_fittings>ul>li>h3,
+			section .centain .official_selection>ul>li>h3,
+			section .centain .surrounding_shop>ul>li>h3,
+			section .centain .brand_choice>ul>li>h3 {
+				font-weight: normal;
+				text-align: center;
+				font-size: 17px;
+				margin-bottom: 8px;
+			}
+			
+			section .centain .p_fittings>ul>li>p,
+			section .centain .surrounding_shop>ul>li>p {
+				text-align: center;
+				font-size: 10px;
+				color: red;
+				margin-bottom: 20px;
+			}
+			
+			section .centain .official_selection>ul>li>p {
+				text-align: center;
+				font-size: 10px;
+				color: darkgray;
+				margin-bottom: 20px;
+			}
+			
+			section .centain .brand_choice>ul>li>p {
+				text-align: center;
+				font-size: 10px;
+				color: darkgray;
+				margin-bottom: 20px;
+			}
+			
+			section .centain .brand_choice>ul>li:nth-child(2)>p,
+			section .centain .brand_choice>ul>li:nth-child(6)>p {
+				color: red;
+			}
+			
+			section .centain .p_fittings>ul>li>h4,
+			section .centain .official_selection>ul>li>h4,
+			section .centain .surrounding_shop>ul>li>h4,
+			section .centain .brand_choice>ul>li>h4 {
+				font-weight: normal;
+				text-align: center;
+				font-size: 20px;
+				color: red;
+			}
+			
+			section .centain .p_fittings>ul>li>div,
+			section .centain .official_selection>ul>li>div,
+			section .centain .surrounding_shop>ul>li>div,
+			section .centain .brand_choice>ul>li>div {
+				width: 180px;
+				height: 30px;
+				position: absolute;
+				bottom: 20px;
+				left: 50px;
+				background-color: white;
+				margin-left: 10px;
+				display: none;
+			}
+			
+			section .centain .p_fittings>ul>li>div>input,
+			section .centain .official_selection>ul>li>div>input,
+			section .centain .surrounding_shop>ul>li>div>input,
+			section .centain .brand_choice>ul>li>div>input {
+				width: 80px;
+				height: 30px;
+				border: none;
+				border: 1px solid darkgrey;
+				border-radius: 5px;
+				text-align: center;
+				line-height: 30px;
+				font-size: 10px;
+			}
+			
+			section .centain .p_fittings>ul>li>div>input:nth-child(2),
+			section .centain .official_selection>ul>li>div>input:nth-child(2),
+			section .centain .brand_choice>ul>li>div>input:nth-child(2) {
+				width: 90px;
+				background-color: darkblue;
+				color: white;
+				border: none;
+				margin-left: 5px;
+			}
+			
+			section .centain .p_fittings>ul>li:nth-child(2)>div>input {
+				margin-left: 50px;
+			}
+			
+			section .centain .p_fittings>ul>li:nth-child(3)>div>input {
+				margin-left: 50px;
+			}
+			
+			section .centain .p_fittings>ul>li:nth-child(5)>div>input {
+				margin-left: 50px;
+			}
+			
+			section .centain .p_fittings>ul>li:nth-child(6)>div>input {
+				margin-left: 50px;
+			}
+			
+			section .centain .official_selection>ul>li:nth-child(3)>div>input {
+				margin-left: 50px;
+			}
+			
+			section .centain .surrounding_shop>ul>li>div>input {
+				margin-left: 50px;
+			}
+			
+			section .centain .p_fittings>ul>li:hover,
+			section .centain .official_selection>ul>li:hover,
+			section .centain .surrounding_shop>ul>li:hover,
+			section .centain .brand_choice>ul>li:hover {
+				box-shadow: 1px 1px 50px #999 inset;
+			}
+			
+			section .centain .p_fittings>ul>li:hover div,
+			section .centain .official_selection>ul>li:hover div,
+			section .centain .surrounding_shop>ul>li:hover div,
+			section .centain .brand_choice>ul>li:hover div {
+				display: block;
+			}
+			
+			section .centain .p_fittings>ul>li>div>input:nth-child(1):hover,
+			section .centain .official_selection>ul>li>div>input:nth-child(1):hover,
+			section .centain .surrounding_shop>ul>li>div>input:nth-child(1):hover,
+			section .centain .brand_choice>ul>li>div>input:nth-child(1):hover {
+				background-color: grey;
+			}
+			
+			section .centain .p_fittings>ul>li>div>input:nth-child(2):hover,
+			section .centain .official_selection>ul>li>div>input:nth-child(2):hover,
+			section .centain .surrounding_shop>ul>li>div>input:nth-child(2):hover,
+			section .centain .brand_choice>ul>li>div>input:nth-child(2):hover {
+				background-color: midnightblue;
+			}
+			
+			section .centain .official_selection {
+				height: 920px;
+				border-radius: 10px;
+				margin-bottom: 30px;
+				background-color: white;
+				position: relative;
+			}
+			
+			section .centain .surrounding_shop {
+				height: 920px;
+				background-color: white;
+				margin-bottom: 30px;
+				position: relative;
+				border-radius: 10px;
+			}
+			
+			section .centain .brand_choice {
+				height: 920px;
+				background-color: white;
+				margin-bottom: 30px;
+				position: relative;
+				border-radius: 10px;
+			}
+			
+			section .centain .smart_dynamic {
+				height: 260px;
+				background-color: white;
+				margin-bottom: 30px;
+				position: relative;
+				border-radius: 10px;
+			}
+			
+			section .centain .smart_dynamic>span {
+				display: block;
+				height: 60px;
+				position: relative;
+			}
+			
+			section .centain .smart_dynamic>span>p {
+				color: grey;
+				font-size: 18px;
+				position: relative;
+				top: 20px;
+				left: 30px;
+			}
+			
+			section .centain .smart_dynamic>ul {
+				height: 200px;
+				position: relative;
+			}
+			
+			section .centain .smart_dynamic>ul>li {
+				list-style: none;
+				display: inline-block;
+				width: 303px;
+				height: 200px;
+				float: left;
+				border: 1px solid gainsboro;
+				position: relative;
+			}
+			
+			section .centain .smart_dynamic>ul>li>img {
+				width: 303px;
+				height: 200px;
+			}
+			
+			section .centain .smart_dynamic>ul>li>div {
+				width: 303px;
+				height: 200px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			
+			section .centain .smart_dynamic>ul>li:hover>div {
+				box-shadow: 1px 1px 50px #999 inset;
+				display: block;
+			}
+			
+			section .centain .smart_apply {
+				height: 420px;
+				background-color: white;
+				margin-bottom: 30px;
+				position: relative;
+				border-radius: 10px;
+			}
+			
+			section .centain .smart_apply>span,
+			section .centain .smart_BBS>span {
+				display: block;
+				height: 60px;
+				position: relative;
+				background-color: ghostwhite;
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+			}
+			
+			section .centain .smart_apply>span>p,
+			section .centain .smart_BBS>span>p {
+				color: grey;
+				font-size: 18px;
+				position: relative;
+				top: 20px;
+				left: 30px;
+			}
+			
+			section .centain .smart_apply>ul {
+				height: 360px;
+				position: relative;
+			}
+			
+			section .centain .smart_BBS>ul {
+				height: 370px;
+				position: relative;
+			}
+			
+			section .centain .smart_apply>ul>li,
+			section .centain .smart_BBS>ul>li {
+				width: 303px;
+				height: 358px;
+				border: 1px solid gainsboro;
+				float: left;
+				list-style: none;
+				position: relative;
+			}
+			
+			section .centain .smart_BBS>ul>li {
+				height: 368px;
+			}
+			
+			section .centain .smart_apply>ul>li>div {
+				width: 200px;
+				height: 225px;
+				position: relative;
+				top: 80px;
+				left: 50px;
+			}
+			
+			section .centain .smart_apply>ul>li>div>span {
+				display: block;
+				width: 70px;
+				height: 70px;
+				overflow: hidden;
+				margin: 0 auto;
+			}
+			
+			section .centain .smart_apply>ul>li>div>span>img {
+				transform: translate(-10px, -10px);
+			}
+			
+			section .centain .smart_apply>ul>li:nth-child(2)>div>span>img {
+				transform: translate(-200px, -10px);
+			}
+			
+			section .centain .smart_apply>ul>li:nth-child(3)>div>span>img {
+				transform: translate(-106px, -10px);
+			}
+			
+			section .centain .smart_apply>ul>li:nth-child(4)>div>span {
+				width: 80px;
+			}
+			
+			section .centain .smart_apply>ul>li:nth-child(4)>div>span>img {
+				transform: translate(-380px, -10px);
+			}
+			
+			section .centain .smart_apply>ul>li>div>h2 {
+				font-weight: normal;
+				font-size: 18px;
+				margin-top: 20px;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			
+			section .centain .smart_apply>ul>li>div>p {
+				color: gray;
+				font-size: 13px;
+				text-align: center;
+			}
+			
+			section .centain .smart_apply>ul>li>span {
+				display: block;
+				width: 303px;
+				height: 360px;
+				float: left;
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			
+			section .centain .smart_apply>ul>li>span>img {
+				margin: 60px 0px 0px 95px;
+			}
+			
+			section .centain .smart_apply>ul>li>span>p {
+				text-align: center;
+				font-size: 15px;
+				color: gray;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			
+			section .centain .smart_apply>ul>li>span>a {
+				text-decoration: none;
+				font-size: 10px;
+				display: block;
+				text-align: center;
+			}
+			
+			section .centain .smart_apply>ul>li:hover>span {
+				display: block;
+				box-shadow: 1px 1px 50px #999 inset;
+			}
+			
+			section .centain .smart_apply>ul>li:hover>div {
+				display: none;
+			}
+			
+			section .centain .smart_BBS {
+				height: 430px;
+				background-color: white;
+				border-radius: 10px;
+			}
+			
+			section .centain .smart_BBS>ul>li>img {
+				width: 245px;
+				height: 160px;
+				border-radius: 5px;
+				margin: 30px 30px;
+			}
+			
+			section .centain .smart_BBS>ul>li>h3 {
+				font-weight: normal;
+				font-size: 17px;
+				margin-left: 30px;
+				margin-bottom: 20px;
+			}
+			
+			section .centain .smart_BBS>ul>li>p {
+				width: 240px;
+				height: 40px;
+				color: gray;
+				font-size: 13px;
+				margin-left: 30px;
+			}
+			
+			section .centain .smart_BBS>ul>li>a {
+				text-decoration: blink;
+				font-size: 13px;
+				margin-left: 30px;
+			}
+			
+			section .centain .smart_BBS>ul>li>div {
+				width: 303px;
+				height: 370px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			
+			section .centain .smart_BBS>ul>li:hover>div {
+				display: block;
+				box-shadow: 1px 1px 50px #999 inset;
+			}
+			
+			footer {
+				width: 100%;
+				height: 320px;
+				position: relative;
+			}
+			
+			footer .foot_top {
+				width: 1215px;
+				height: 130px;
+				position: relative;
+				top: 100px;
+				left: 50%;
+				transform: translateX(-50%);
+				border-bottom: gray solid 1px;
+			}
+			
+			footer .foot_top .foot_text {
+				width: 800px;
+				height: 90px;
+				float: left;
+			}
+			
+			footer .foot_top .foot_text>li {
+				display: inline-block;
+				list-style: none;
+				margin-right: 85px;
+			}
+			
+			footer .foot_top .foot_text>li>ul>li {
+				list-style: none;
+				font-size: 13px;
+				margin-bottom: 5px;
+			}
+			
+			footer .foot_top .foot_text>li:last-child {
+				margin: 0;
+			}
+			
+			footer .foot_top .foot_text>li>ul>li>a {
+				text-decoration: none;
+				color: gray;
+			}
+			
+			footer .foot_top .foot_text>li>ul>li>a:hover {
+				color: #008B8B;
+			}
+			
+			footer .foot_top .right_text {
+				width: 205px;
+				height: 100px;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+			
+			footer .foot_top .right_text>p:nth-of-type(1) {
+				width: 190px;
+				height: 40px;
+				color: black;
+				font-size: 27px;
+				float: right;
+			}
+			
+			footer .foot_top .right_text>p:nth-of-type(2) {
+				color: gray;
+				width: 240px;
+				position: relative;
+				top: 0px;
+				font-size: 12px;
+				transform: translateX(-45px);
+			}
+			
+			footer .foot_top .right_text>div {
+				width: 130px;
+				height: 30px;
+				border-radius: 3px;
+				color: midnightblue;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				border: silver solid 1px;
+				text-align: center;
+				line-height: 30px;
+			}
+			
+			footer .foot_bottom {
+				width: 1230px;
+				height: 70px;
+				font-size: 10px;
+				color: darkslategray;
+				position: relative;
+				top: 120px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			
+			footer .foot_bottom>div {
+				width: 700px;
+				height: 40px;
+				float: left;
+			}
+			
+			footer .foot_bottom>div>p {
+				width: 500px;
+				float: left;
+			}
+			
+			footer .foot_bottom>div>a {
+				text-align: center;
+				width: 60px;
+				text-decoration: none;
+				float: left;
+				margin-left: 5px;
+				border-left: gainsboro solid 1px;
+			}
+			
+			footer .foot_bottom>div>a:hover {
+				color: darkslategray;
+			}
+			
+			footer .foot_bottom>div>a:nth-of-type(4) {
+				width: 400px;
+				height: 20px;
+				border-left: none;
+				text-align: initial;
+				float: left;
+				color: gray;
+				padding-top: 10px;
+			}
+			
+			footer .foot_bottom>ul {
+				top: 0;
+				right: 0;
+				width: 115px;
+				height: 50px;
+				position: absolute;
+				top: -70px;
+				right: 0;
+			}
+			
+			footer .foot_bottom>ul>li {
+				display: block;
+				height: 100px;
+			}
+			
+			footer .foot_bottom>ul>li>div {
+				width: 115px;
+				height: 50px;
+				border-radius: 5px;
+			}
+			
+			footer .foot_bottom>ul>li>div>span {
+				position: relative;
+				top: 20px;
+				left: 15px;
+			}
+			
+			footer .foot_bottom>ul>li>div>p {
+				position: relative;
+				top: 19px;
+				left: 18px;
+			}
+			
+			footer .foot_bottom>ul>li>div:nth-child(2)>span {
+				display: block;
+				width: 20px;
+				height: 20px;
+				overflow: hidden;
+				float: left;
+			}
+			
+			footer .foot_bottom>ul>li>div:nth-child(2)>p,
+			footer .foot_bottom>ul>li>div:nth-child(1)>p {
+				width: 25px;
+				height: 20px;
+				float: left;
+				margin-left: 10px;
+			}
+			
+			footer .foot_bottom>ul>li>div:nth-child(1) {
+				display: none;
+			}
+			
+			footer .foot_bottom>ul>li>div:nth-child(1)>span {
+				display: block;
+				width: 20px;
+				height: 20px;
+				overflow: hidden;
+				float: left;
+			}
+			
+			footer .foot_bottom>ul>li>div:nth-child(1)>span>img {
+				transform: translateY(-30px);
+			}
+			
+			footer .foot_bottom>ul>li:hover {
+				border-radius: 5px;
+				background-color: white;
+				border: 1px solid gainsboro;
+			}
+			
+			footer .foot_bottom>ul>li:hover>div:nth-child(1) {
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<nav> <span><img src="imgJianGuoPro2/global-logo-red@2x.85550cd7bec73c98adacee227ba6a8a0.png"/></span>
+			<div>
+				<a href="#">在线商城</a>
+				<a href="jiangguopro2/jianguopro2.html">坚果Pro 2</a> 
+				<a href="pro.html">坚果 Pro</a> 
+				<a href="#">Smartisan OS</a> 
+				<a href="666欢喜云.html" target="_blank">欢喜云</a>
+				<a href="download.html">应用下载</a>
+				<a href="#">官方论坛</a>
+				<span></span> </div>
+		<div class="shop"> <span id="login"><img src="imgJianGuoPro2/account-icon.32d87deb02b3d1c3cc5bcff0c26314ac.png" /></span> <span> <img src="imgJianGuoPro2/account-icon.32d87deb02b3d1c3cc5bcff0c26314ac.png"/> </span>
+	<div> <img src="imgJianGuoPro2/cart-empty.01f4c99a9df22275a7d374be0195adc7.png" />
+						<p1>购物车为空</p1>
+						<p2>您还没有选购任何商品, 现在能前往商城选购
+						</p2>
+					</div>
+				</div>
+			</nav>
+			<div class="header_bot">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">手机</a><span></span></li>
+					<li><a href="#">"足迹系列"保护套</a><span></span></li>
+					<li><a href="#">官方配件</a><span></span></li>
+					<li><a href="#">空气净化类</a><span></span></li>
+					<li><a href="#">品牌周边</a><span></span></li>
+					<li><a href="#">第三方商品</a><span></span></li>
+					<li><a href="#">全部商品</a><span></span></li>
+					<li><a href="#">服务</a><span></span></li>
+					<li>
+						<a href="#"></a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<section>
+			<div class="centain">
+				<div class="central">
+					<ul class="doc-lis">
+						<li id="0"></li>
+						<li id="1"></li>
+						<li id="2"></li>
+						<li id="3"></li>
+						<li id="4"></li>
+					</ul>
+					<ul class="moon">
+						<li id="0">
+							<img src="imgJianGuoPro2/index_轮播图块/fc12121.png" />
+							<img src="imgJianGuoPro2/index_轮播图块/fc12122.png" />
+							<img src="imgJianGuoPro2/index_轮播图块/fc12123.png" />
+						</li>
+						<li id="1">
+							<img src="imgJianGuoPro2/index_轮播图块/Fchanghuxi11.png" />
+							<img src="imgJianGuoPro2/index_轮播图块/Fchanghuxi22.png" />
+							<img src="imgJianGuoPro2/index_轮播图块/Fchanghuxi33.png" />
+						</li>
+						<li id="2">
+							<img src="imgJianGuoPro2/index_轮播图块/ertongkouzhao1.png" />
+							<img src="imgJianGuoPro2/index_轮播图块/ertongkouzhao2.png" />
+							<img src="imgJianGuoPro2/index_轮播图块/ertongkouzhao3.png" />
+						</li>
+						<li id="3">
+							<img src="imgJianGuoPro2/index_轮播图块/pro211.png" />
+							<img src="imgJianGuoPro2/index_轮播图块/pro222.png" />
+							<img src="imgJianGuoPro2/index_轮播图块/pro233.png" />
+						</li>
+						<li id="4">
+							<img src="imgJianGuoPro2/index_轮播图块/5001.png" />
+							<img src="imgJianGuoPro2/index_轮播图块/5002.png" />
+							<img src="imgJianGuoPro2/index_轮播图块/5003.png" />
+						</li>
+					</ul>
+
+				</div>
+				<div class="purify">
+					<ul>
+						<li> <img src="imgJianGuoPro2/d577909752ec2afef49e928041c44bb7.jpg" />
+							<div> </div>
+						</li>
+						<li> <img src="imgJianGuoPro2/juhe.jpg" />
+							<div> </div>
+						</li>
+						<li> <img src="imgJianGuoPro2/b867ac4d7cdab876e3addea223a75dcf.jpg" />
+							<div> </div>
+						</li>
+						<li> <img src="imgJianGuoPro2/pc.jpg" />
+							<div> </div>
+						</li>
+					</ul>
+				</div>
+				<div class="hot_shop">
+					<h2>热门商品</h2>
+					<ul>
+						<li><span></span><img src="imgJianGuoPro2/dc2b033d61d8ba66eba61ebabd25c210.webp" />
+							<h3>坚果 Pro2 PET 2D 保护膜</h3>
+							<p>超强透光率.耐挂花.防指纹</p><span></span>
+							<h4>¥ 49.00</h4>
+							<div><input type="button" value="查看详情" /> <input type="button" value="加入购物车" /> </div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/71432ad30288fb860a4389881069b874.webp" />
+							<h3>畅呼吸智能空气</h3>
+							<p>超强净化能力.超低噪音.超长寿命</p><span></span>
+							<h4>¥ 3499.00</h4>
+							<div><input type="button" value="查看详情" /> <input type="button" value="加入购物车" /></div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/3bd5267edd7257e719e7965b756e2c2e.webp" />
+							<h3>坚果 Pro</h3>
+							<p>购机最高优惠500元</p><span></span>
+							<h4>¥ 1299.00</h4>
+							<div> <input type="button" value="查看详情" /> </div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/71c7de27d6a12a06b72fca9464c81e5b.webp" />
+							<h3>Smartisan 蓝牙运动耳机</h3>
+							<p>IPX5级防水设计.佩戴舒适</p><span></span>
+							<h4>¥ 299.00</h4>
+							<div> <input type="button" value="查看详情" /> <input type="button" value="加入购物车" /> </div>
+						</li>
+					</ul>
+				</div>
+				<div class="p_fittings"> <span><h3>净化器及配件</h3></span> <img src="imgJianGuoPro2/index_净化器图片/空气净化器1.jpg" />
+					<div></div>
+					<ul>
+						<li><span></span><img src="imgJianGuoPro2/index_净化器图片/滤芯.jpg" />
+							<h3>除霾除甲醛高效复合滤芯</h3>
+							<p>精选双层防护材质.过滤更精细.去味更有效</p><span></span>
+							<h4>¥ 799.00</h4>
+							<div> <input type="button" value="查看详情" /> <input type="button" value="加入购物车" /> </div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index_净化器图片/滤清器.jpg" />
+							<h3>畅呼吸汽车空调滤清器</h3>
+							<p>一路洁净.安心出行</p><span></span>
+							<h4>¥ 49.00</h4>
+							<div> <input type="button" value="查看详情" /> </div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index_净化器图片/口罩.jpg" />
+							<h3>畅呼吸防雾霾口罩</h3>
+							<p>买一盒随机赠一枚</p><span></span>
+							<h4>¥ 99.00</h4>
+							<div> <input type="button" value="查看详情" /></div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index_净化器图片/活性炭滤芯.jpg" />
+							<h3>除甲醛超级活性炭滤芯</h3>
+							<p>打造专业除甲醛超级活性炭滤芯</p><span></span>
+							<h4>¥ 699.00</h4>
+							<div> <input type="button" value="查看详情" /> <input type="button" value="加入购物车" /> </div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index_净化器图片/空调滤清器.jpg" />
+							<h3>畅呼吸汽车空调滤清器</h3>
+							<p>一路洁净.安心出行</p><span></span>
+							<h4>¥ 69.00</h4>
+							<div> <input type="button" value="查看详情" /></div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index_净化器图片/防雾霾口罩.jpg" />
+							<h3>畅呼吸防雾霾口罩</h3>
+							<p>儿童款 买一盒随机赠送一枚</p><span></span>
+							<h4>¥ 129.00</h4>
+							<div> <input type="button" value="查看详情" /> </div>
+						</li>
+					</ul>
+				</div>
+				<div class="official_selection"> <span><h3>官方精选</h3></span> <img src="imgJianGuoPro2/index官方精选/官方精选.jpg" />
+					<div></div>
+					<ul>
+						<li><span></span><img src="imgJianGuoPro2/index官方精选/手机壳绿色.jpg" />
+							<h3>坚果Pro 2 文青保护套</h3>
+							<p>文青配色.质感精良</p><span></span>
+							<h4>¥ 99.00</h4>
+							<div> <input type="button" value="查看详情" /> <input type="button" value="加入购物车" /> </div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index官方精选/充电线.jpg" />
+							<h3>Smartisan 原装Type-C数据线</h3>
+							<p>PTC 过温保护.凹形设计.TPE环保材质</p><span></span>
+							<h4>¥ 39.00</h4>
+							<div> <input type="button" value="查看详情" /> <input type="button" value="加入购物车" /></div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index官方精选/红色耳机.jpg" />
+							<h3>Smartisan S-1001 圈铁线控耳机</h3>
+							<p>极简造型.复合振膜.专业级调音</p><span></span>
+							<h4>¥ 199.00</h4>
+							<div> <input type="button" value="查看详情" /></div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index官方精选/蓝色耳机.jpg" />
+							<h3>Smartisan 半入耳式耳机 心动版</h3>
+							<p>哑光表面.专业级调音</p><span></span>
+							<h4>¥ 99.00</h4>
+							<div> <input type="button" value="查看详情" /> <input type="button" value="加入购物车" /> </div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index官方精选/手机壳金色.png" />
+							<h3>坚果Pro2软胶保护套</h3>
+							<p>TUP 环保材质.完美贴合</p><span></span>
+							<h4>¥ 49.00</h4>
+							<div> <input type="button" value="查看详情" /><input type="button" value="加入购物车" /></div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index官方精选/移动充.jpg" />
+							<h3>Smartisan 快充移动电源10000mAh</h3>
+							<p>10000mAh 双向快充, 轻盈便携, 高标准安全保护
+							</p><span></span>
+							<h4>¥ 199.00</h4>
+							<div> <input type="button" value="查看详情" /> <input type="button" value="加入购物车" /> </div>
+						</li>
+					</ul>
+				</div>
+				<div class="surrounding_shop"> <span><h3>周边商品</h3></span> <img src="imgJianGuoPro2/index_周边商品/周边.jpg" />
+					<div></div>
+					<ul>
+						<li><span></span><img src="imgJianGuoPro2/index_周边商品/蓝色衣服.png" />
+							<h3>Smartisan 卫衣大爆炸</h3>
+							<p>服装大爆炸</p><span></span>
+							<h4>¥ 199.00</h4>
+							<div> <input type="button" value="查看详情" /> </div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index_周边商品/笔记本.jpg" />
+							<h3>Smartisan记事本</h3>
+							<p>荔枝纹仿皮材质.优质米色纸.不洇不透</p><span></span>
+							<h4>¥ 49.00</h4>
+							<div> <input type="button" value="查看详情" /> </div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index_周边商品/红色衬衫.png" />
+							<h3>Smartisan T恤 任天堂发售"红白机"</h3>
+							<p>服装限时优惠</p><span></span>
+							<h4>¥ 99.00</h4>
+							<div> <input type="button" value="查看详情" /></div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index_周边商品/灰色衣服.png" />
+							<h3>Smartisan 卫衣热血</h3>
+							<p>服装限时优惠</p><span></span>
+							<h4>¥ 199.00</h4>
+							<div> <input type="button" value="查看详情" /> </div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index_周边商品/黑色衣服.png" />
+							<h3>Smartisan 卫衣经典款</h3>
+							<p>服装限时优惠</p><span></span>
+							<h4>¥ 199.00</h4>
+							<div> <input type="button" value="查看详情" /></div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index_周边商品/明信片.jpg" />
+							<h3>Smartisan 明信片</h3>
+							<p>优质卡纸.包装精致/色彩饱满</p><span></span>
+							<h4>¥ 199.00</h4>
+							<div> <input type="button" value="查看详情" /></div>
+						</li>
+					</ul>
+				</div>
+				<div class="brand_choice"> <span><h3>品牌精选</h3></span> <img src="imgJianGuoPro2/index_品牌精选/品牌精选.jpg" />
+					<div></div>
+					<ul>
+						<li><span></span><img src="imgJianGuoPro2/index_品牌精选/黑色耳机.jpg" />
+							<h3>FIIL DIVA2 智能降噪耳机</h3>
+							<p>自动启停</p><span></span>
+							<h4>¥ 1199.00</h4>
+							<div> <input type="button" value="查看详情" /> <input type="button" value="加入购物车" /> </div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index_品牌精选/电视CC.jpg" />
+							<h3>极米无屏电视 CC</h3>
+							<p>极米无屏电视 CC 限时优惠</p><span></span>
+							<h4>¥ 2599.00</h4>
+							<div> <input type="button" value="查看详情" /> <input type="button" value="加入购物车" /></div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index_品牌精选/白色耳机.jpg" />
+							<h3>FIIL Diva 智能蓝牙无线降噪耳机</h3>
+							<p>手势触控.智能启停</p><span></span>
+							<h4>¥ 999.00</h4>
+							<div> <input type="button" value="查看详情" /><input type="button" value="加入购物车" /></div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index_品牌精选/作品.jpg" />
+							<h3>《深泽直人》 </h3>
+							<p>首次面向中国读者介绍其作品</p><span></span>
+							<h4>¥ 199.00</h4>
+							<div> <input type="button" value="查看详情" /> <input type="button" value="加入购物车" /> </div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index_品牌精选/作品二.jpg" />
+							<h3>《索尼设计，塑造现代》 </h3>
+							<p>索尼全盛时期工业设计作品首次集成书并引进中国</p><span></span>
+							<h4>¥ 259.00</h4>
+							<div> <input type="button" value="查看详情" /><input type="button" value="加入购物车" /></div>
+						</li>
+						<li><span></span><img src="imgJianGuoPro2/index_品牌精选/电视.jpg" />
+							<h3>极米无屏电视H1S</h3>
+							<p>极米无屏电视 H1S 限时优惠</p><span></span>
+							<h4>¥ 4399.00</h4>
+							<div> <input type="button" value="查看详情" /> <input type="button" value="加入购物车" /> </div>
+						</li>
+					</ul>
+				</div>
+				<div class="smart_dynamic"> <span><p>锤子科技动态</p></span>
+					<ul>
+						<li><img src="imgJianGuoPro2/index_锤子科技动态/新品发布会.png" />
+							<div> </div>
+						</li>
+						<li><img src="imgJianGuoPro2/index_锤子科技动态/新特征.jpg" />
+							<div> </div>
+						</li>
+						<li><img src="imgJianGuoPro2/index_锤子科技动态/净化器视频.jpg" />
+							<div> </div>
+						</li>
+						<li><img src="imgJianGuoPro2/index_锤子科技动态/功能宣传视频.jpg" />
+							<div> </div>
+						</li>
+					</ul>
+				</div>
+				<div class="smart_apply"> <span><p>锤子应用</p></span>
+					<ul>
+						<li>
+							<div> <span> <img src="imgJianGuoPro2/index_锤子应用/app-icon-sprite.09cf0f99d091277532779a2b2971e708.png" /> </span>
+								<h2>HandShaker</h2>
+								<p>在Mac 和 window 电脑上也可以方便自如地管理你在Android 手机中的内容</p>
+							</div> <span> <img src="imgJianGuoPro2/index_锤子应用/launcher-download.2508eb243fa44df3c58af4c8f7e8bf9d.jpg"/> <p>扫二维码下载锤子便签</p> <a href="#">进一步了解锤子标签</a> </span> </li>
+						<li>
+							<div> <span> <img src="imgJianGuoPro2/index_锤子应用/app-icon-sprite.09cf0f99d091277532779a2b2971e708.png" /> </span>
+								<h2>锤子便签</h2>
+								<p>雅致的信纸, 精心调整的文字排版
+									<br /> 这可能是最让人写字的便签应用</p>
+							</div> <span> <img src="imgJianGuoPro2/index_锤子应用/launcher-download.2508eb243fa44df3c58af4c8f7e8bf9d.jpg"/> <p>扫二维码下载锤子便签</p> <a href="#">进一步了解锤子标签</a> </span> </li>
+						<li>
+							<div> <span> <img src="imgJianGuoPro2/index_锤子应用/app-icon-sprite.09cf0f99d091277532779a2b2971e708.png" /> </span>
+								<h2>锤子桌面</h2>
+								<p>它示范了何为"美观，易用和人性化"</p>
+							</div> <span> <img src="imgJianGuoPro2/index_锤子应用/launcher-download.2508eb243fa44df3c58af4c8f7e8bf9d.jpg"/> <p>扫二维码下载锤子便签</p> <a href="#">进一步了解锤子标签</a> </span> </li>
+						<li>
+							<div> <span> <img src="imgJianGuoPro2/index_锤子应用/app-icon-sprite.09cf0f99d091277532779a2b2971e708.png" /> </span>
+								<h2>锤子科技论坛</h2>
+								<p>是一个科技论坛 <br /> 不只是科技论坛</p>
+							</div> <span> <img src="imgJianGuoPro2/index_锤子应用/launcher-download.2508eb243fa44df3c58af4c8f7e8bf9d.jpg"/> <p>扫二维码下载锤子便签</p> <a href="#">进一步了解锤子标签</a> </span> </li>
+					</ul>
+				</div>
+				<div class="smart_BBS"> <span> <p>论坛精彩</p></span>
+					<ul>
+						<li><img src="imgJianGuoPro2/index_论坛精选/图1.jpg" />
+							<h3>坚果Pro 2 官方开箱照</h3>
+							<p>坚果 Pro 现已上市, 1799元起. 下面是一些坚果Pro 2 的实拍图</p> <a href="#">阅读全文</a>
+							<div></div>
+						</li>
+						<li><img src="imgJianGuoPro2/index_论坛精选/图2.png" />
+							<h3>坚果Pro 2 官方开箱照</h3>
+							<p>坚果 Pro 现已上市, 1799元起. 下面是一些坚果Pro 2 的实拍图</p> <a href="#">阅读全文</a>
+							<div></div>
+						</li>
+						<li><img src="imgJianGuoPro2/index_论坛精选/图3.png" />
+							<h3>坚果Pro 2 官方开箱照</h3>
+							<p>坚果 Pro 现已上市, 1799元起. 下面是一些坚果Pro 2 的实拍图</p> <a href="#">阅读全文</a>
+							<div></div>
+						</li>
+						<li><img src="imgJianGuoPro2/index_论坛精选/图4.jpg" />
+							<h3>坚果Pro 2 官方开箱照</h3>
+							<p>坚果 Pro 现已上市, 1799元起. 下面是一些坚果Pro 2 的实拍图</p> <a href="#">阅读全文</a>
+							<div></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="foot_top">
+				<ul class="foot_text">
+					<li>
+						<ul>
+							<li>
+								<p>订单服务</p>
+							</li>
+							<li><a href="#">购买指南</a></li>
+							<li><a href="#">支付方式</a></li>
+							<li><a href="#">送货政策</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>
+								<p>服务支持</p>
+							</li>
+							<li><a href="#">售后服务</a></li>
+							<li><a href="#">维修门店</a></li>
+							<li><a href="#">零售门店</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>
+								<p>自助服务</p>
+							</li>
+							<li><a href="#">热点咨询</a></li>
+							<li><a href="#">预约购买</a></li>
+							<li><a href="#">订单物流</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>
+								<p>媒体中心</p>
+							</li>
+							<li><a href="#">新闻动态</a></li>
+							<li><a href="#">官方视频</a></li>
+							<li><a href="#">图片资源</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>
+								<p>关于公司</p>
+							</li>
+							<li><a href="#">公司简介</a></li>
+							<li><a href="#">加入我们</a></li>
+							<li><a href="#">联系我们</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>
+								<p>关注我们</p>
+							</li>
+							<li><a href="#">新浪微博</a></li>
+							<li><a href="#">官方微信</a></li>
+							<li><a href="#">官方贴吧</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="right_text">
+					<p>400-626-5666</p>
+					<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 周一至周日 9:00-18:00(仅收市话费)</p>
+					<div><span>?</span>在线帮助</div>
+				</div>
+			</div>
+			<div class="foot_bottom">
+				<div>
+					<p>Copyright ©, Smartisan Digital Co., Ltd. All Rights Reserved.北京锤子数码科技有限公司</p> <a href="#">法律声明</a> <a href="#"> 隐私条款</a> <a href="#"> 开发者中心</a> <a href="#">京ICP备14041720号-1&nbsp;
+京ICP证140622号&nbsp;
+京公网安备11010502025474</a> </div>
+				<ul>
+					<li>
+						<div><span><img src="imgJianGuoPro2/flag.afd0e7c69a7b9639cbfe7dde4ec0f3b0.png"/></span>
+							<p>美国</p>
+						</div>
+						<div> <span><img src="imgJianGuoPro2/flag.afd0e7c69a7b9639cbfe7dde4ec0f3b0.png"/></span>
+							<p>中国</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		var docLis = document.querySelectorAll("section .centain .central>.doc-lis>li");
+		var lis = document.querySelectorAll("section .centain .central .moon>li");
+		var width = parseInt(getComputedStyle(lis[1]).width);
+		var height = parseInt(getComputedStyle(lis[1]).height);
+		var imgs = document.querySelectorAll("section .centain .central .moon>li>img:nth-of-type(2)");
+		var isGoToIndex2= sessionStorage.getItem("isGoToIndex2");
+		if(!isGoToIndex2){
+			setTimeout(function(){
+			window.location.href = "index2.html";
+			sessionStorage.setItem("isGoToIndex2","go");
+		   },1000);
+		}
+		setNone();
+		lis[1].style.display = "block";
+		oppo();
+		for (var i = 0; i < lis.length; i++) {
+			console.log(i);
+			docLis[i].onclick = function() {
+				setNone();
+				lis[this.id].style.display = "block";
+				docLis[this.id].style.backgroundColor = "ghostwhite";
+			};
+			lis[i].onmousemove = function(e) {
+				clearInterval(liOnclck);
+				var x = width / 2 - e.offsetX;
+				var y = height / 2 - e.offsetY;
+				var setx = x / 400;
+				var sety = y / 400;
+				this.style.transform = "skew(" + setx + "deg," + sety + "deg)";
+				this.style.boxShadow = x * 0.01 + "px " + y * 0.01 + "px 50px gray";
+				imgs[this.id].style.transform = "translate(" + x * 0.02 + "px," + y * 0.02 + "px)";
+			};
+			lis[i].onmouseout = function() {
+				oppo();
+				this.style.transform = "none";
+				this.style.boxShadow = "none";
+			};
+		}
+
+		function setNone() {
+			for (var i = 0; i < lis.length; i++) {
+				lis[i].style.display = "none";
+				docLis[i].style.backgroundColor = "gray";
+			}
+		}
+		var index = 0;
+		var liOnclck;
+
+		function oppo() {
+			liOnclck = setInterval(function() {
+				setNone();
+				index++;
+				if (index == 5) {
+					index = 0;
+					lis[0].style.display = "block";
+				} else {
+					lis[index].style.display = "block";
+				}
+			}, 3000);
+		};
+		var login = document.querySelector("#login");
+		login.onclick = function() {
+			window.location.href = "666登陆界面.html";
+		};
+	</script>
+
+</html>

@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>smartisan应用下载-锤子科技</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.container {
+				width: 100%;
+				height: 100%;
+				background-color: gainsboro;
+			}
+			/**
+			 * header
+			 */
+			
+			.container .header {
+				width: 100%;
+				height: 190px;
+			}
+			
+			.container .header .index {
+				width: 100%;
+				height: 100px;
+				background-color: black;
+			}
+			
+			.container .header .index>div {
+				width: 1220px;
+				height: 100px;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			.container .header .index>div>span {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background: url(imgJG/global-logo-red@2x.85550cd7bec73c98adacee227ba6a8a0.png) no-repeat;
+				background-size: 50px; //可以让背景图片等比例缩小
+				background-position-y: 0;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			
+			.container .header .index>div>ul {
+				position: absolute;
+				top: 50%;
+				left: 250px;
+				transform: translateY(-60%);
+			}
+			
+			.container .header .index>div>ul>li {
+				float: left;
+				list-style: none;
+				margin-right: 50px;
+			}
+			
+			.container .header .index>div>ul>li>a {
+				text-decoration: none;
+				color: gainsboro;
+				font-size: 12px;
+			}
+			
+			.container .header .index>div>ul>li>a:hover {
+				color: white;
+			}
+			
+			.container .header .index>div>.person {
+				width: 105px;
+				height: 20px;
+				position: absolute;
+				top: 50%;
+				right: 100px;
+				transform: translateY(-60%);
+			}
+			
+			.container .header .index>div>.person>ul {
+				position: relative;
+			}
+			
+			.container .header .index>div>.person>ul>li:nth-child(1) {
+				display: inline-block;
+				list-style: none;
+				width: 28px;
+				height: 20px;
+				background: url(imgJG/account-icon_32d87deb02.png) no-repeat;
+				background-position: -60px 0;
+			}
+			
+			.container .header .index>div>.person>ul>li:nth-child(1):hover {
+				width: 28px;
+				background: url(imgJG/account-icon_32d87deb02.png) no-repeat;
+			}
+			
+			.container .header .index>div>.person>ul>li:nth-child(2) {
+				display: inline-block;
+				list-style: none;
+				width: 28px;
+				height: 20px;
+				background: url(imgJG/account-icon_32d87deb02.png) no-repeat;
+				background-position: -60px -20px;
+				margin-left: 25px;
+			}
+			
+			.container .header .index>div>.person>ul>li:nth-child(2):hover {
+				width: 28px;
+				background: url(imgJG/account-icon_32d87deb02.png) no-repeat;
+				background-position: 0 -20px;
+			}
+			
+			.container .header .index>div>.person>ul>li:nth-child(3) {
+				list-style: none;
+				width: 20px;
+				height: 20px;
+				border-radius: 10px;
+				background-color: gray;
+				position: absolute;
+				top: 0;
+				right: 0;
+				text-align: center;
+				line-height: 20px;
+			}
+			
+			.container .header .index>div>.person>ul>li:nth-child(3)>a {
+				color: white;
+				font-size: 10px;
+			}
+			
+			.container .header .titel {
+				width: 1220px;
+				height: 90px;
+				margin: 0 auto;
+				position: relative;
+				z-index: 1;
+				border-bottom: 1px solid rgba(0, 0, 0, 0);
+			}
+			
+			.container .header .titel>ul {
+				margin-top: 35px;
+			}
+			
+			.container .header .titel>ul>li {
+				list-style: none;
+				float: left;
+				margin-right: 40px;
+			}
+			
+			.container .header .titel>ul>li>a {
+				font-size: 15px;
+				text-decoration: none;
+				color: dimgray;
+			}
+			
+			.container .header .titel>ul>li:nth-child(1)>a {
+				color: black;
+			}
+			
+			.container .header .titel>ul>li:hover>a {
+				color: black;
+			}
+			
+			.container .flash {
+				width: 100%;
+				height: 345px;
+				background-color: white;
+				display: none;
+				margin-top: -100px;
+				position: absolute;
+			}
+			
+			.container .flash>ul {
+				width: 650px;
+				height: 255px;
+				margin: 0 auto;
+			}
+			
+			.container .flash>ul>li {
+				list-style: none;
+				display: inline-block;
+				margin-top: 150px;
+				margin-right: 100px;
+			}
+			
+			.container .flash>ul>li:nth-last-child(1) {
+				margin-right: 0;
+			}
+			/**
+			 * slideshow
+			 */
+			
+			.container .slideshow {
+				width: 1220px;
+				height: 500px;
+				border-radius: 20px;
+				margin: 0px auto;
+			}
+			
+			.container .slideshow>ul>li {
+				list-style: none;
+			}
+			
+			.container .slideshow>ul>li>img {
+				width: 1220px;
+				height: 500px;
+				border-radius: 20px;
+			}
+			/**
+			 * content
+			 */
+			
+			.container .content {
+				width: 1220px;
+				height: 1205px;
+				margin: 10px auto;
+				border-radius: 10px;
+				background-color: white;
+			}
+			
+			.container .content>ul>li {
+				width: 303px;
+				height: 400px;
+				float: left;
+				list-style: none;
+				border-bottom: 1px solid rgba(200, 200, 200, 0.2);
+				border-right: 1px solid rgba(200, 200, 200, 0.2);
+			}
+			
+			.container .content>ul>li:nth-of-type(4n) {
+				margin-right: 0px;
+				border-right: 0px solid dimgray;
+			}
+			
+			.container .content>ul>li>span {
+				display: block;
+				height: 80px;
+				width: 80px;
+				background: url(imgJG/icon-home_bbb7d30ee5.jpg) no-repeat;
+				margin-left: 110px;
+				margin-top: 95px;
+			}
+			
+			.container .content>ul>li:nth-of-type(1)>span {
+				background-position: -490px -130px;
+			}
+			
+			.container .content>ul>li:nth-of-type(2)>span {
+				background-position: -245px -250px;
+			}
+			
+			.container .content>ul>li:nth-of-type(3)>span {
+				background-position: -125px -130px;
+			}
+			
+			.container .content>ul>li:nth-of-type(4)>span {
+				background-position: -130px -260px;
+			}
+			
+			.container .content>ul>li:nth-of-type(5)>span {
+				background-position: -5px -250px;
+			}
+			
+			.container .content>ul>li:nth-of-type(6)>span {
+				background-position: -245px -130px;
+			}
+			
+			.container .content>ul>li:nth-of-type(7)>span {
+				background-position: -370px -130px;
+			}
+			
+			.container .content>ul>li:nth-of-type(8)>span {
+				background-position: -8px -130px;
+			}
+			
+			.container .content>ul>li:nth-of-type(10)>span {
+				background-position: -8px -370px;
+			}
+			
+			.container .content>ul>li {
+				text-align: center;
+				line-height: 20px;
+				position: relative;
+			}
+			
+			.container .content>ul>li>h4 {
+				margin-top: 40px;
+				margin-bottom: 20px;
+				color: dimgray;
+			}
+			
+			.container .content>ul>li>p {
+				font-size: 12px;
+				color: darkgray;
+			}
+			.container .content>ul>li>div{
+				width: 303px;
+				height: 400px;
+				display: none;
+				position: absolute;
+				top: 0;
+				background-color: white;
+			}
+			.container .content>ul>li>div>img{
+				width: 110px;
+				height: 110px;
+				margin: 80px 0 50px 0;
+				
+				
+			}
+			.container .content>ul>li>div>p{
+				margin-bottom:50px;
+				font-size: 15px;
+				color: darkgray;
+			}
+			.container .content>ul>li>div>a{
+				font-size: 12px;
+				text-decoration: none;
+			}
+			.container .content>ul>li:hover>div{
+				display: block;
+			}
+			.container .content>ul>li>.first>.first_box{
+				width: 250px;
+				height: 160px;
+				margin: 140px auto;
+			}
+			.container .content>ul>li>.first>.first_box>div{
+				width: 250px;
+				height: 50px;
+				background-color: blue;
+				text-align: center;
+				line-height: 60px;
+				border-radius: 10px;
+				margin: 35px auto;
+			}
+			.container .content>ul>li>.first>.first_box>div>img{
+				width: 20px;
+				height: 20px;
+				margin-right: 10px;
+			}
+			.container .content>ul>li>.first>.first_box>div>span{
+				display: inline-block;
+				color: white;
+				font-size: 15px;
+				position: relative;
+				transform: translateY(-2px);
+			}
+			.container .content>ul>li>.first>.first_box>a{
+				font-size: 12px;
+				text-decoration: none;
+			}
+			.container .content>ul>li:nth-last-of-type(2)>div>.last{
+				width: 305px;
+				height: 200px;
+				margin:  140px auto;
+			}
+			.container .content>ul>li:nth-last-of-type(2)>div>.last>input{
+				width: 100px;
+				height: 40px;
+				background-color: gainsboro;
+				border-radius: 5px;
+				outline: none;
+				border: none;
+				margin-bottom: 60px;
+			}
+			.container .content>ul>li:nth-last-of-type(2)>div>.last>p{
+				font-size: 12px;
+				color: darkgray;
+				margin-bottom: 30px;
+			}
+			.container .content>ul>li:nth-last-of-type(2)>div>.last>a{
+				font-size: 12px;
+				text-decoration: none;
+			}
+			/**
+			 * behind
+			 */
+			
+			.container .behind {
+				width: 100%;
+				height: 350px;
+				background-color: white;
+				margin-top: 40px;
+			}
+			.container .behind .brand{
+				width: 1220px;
+				height: 235px;
+				margin: 0 auto;
+				border-bottom: 1px solid rgba(200,200,200,1);
+			}
+			.container .behind .brand>ul{
+				float: left;
+				margin-right: 90px;
+				margin-top: 90px;
+				
+			}
+			.container .behind .brand>ul>h3{
+				font-size: 15px;
+				color: dimgrey;
+				margin-bottom: 20px;
+			}
+			.container .behind .brand>ul>ul>li{
+				list-style: none;
+				margin-bottom: 10px;
+			}
+			.container .behind .brand>ul>ul>li>a{
+				font-size: 15px;
+				color: grey;
+				text-decoration: none;
+			}
+			.container .behind .brand>ul>ul>li>a:hover{
+				color: blue;
+			}
+			.container .behind .brand>div{
+				float: right;
+				margin-top:90px ;
+				text-align: right;
+			}
+			.container .behind .brand>div>p:nth-child(1){
+				font-size: 25px;
+				color: dimgray;
+				margin-bottom: 10px;
+			}
+			.container .behind .brand>div>p:nth-child(2){
+				font-size: 12px;
+				color: gainsboro;
+				margin-bottom: 10px;
+			}
+			.container .behind .brand>div>input{
+				width: 130px;
+				height: 30px;
+				border: 1px solid rgba(200,200,200,1);
+				border-radius: 5px;
+				outline: none;
+				background-color: whitesmoke;
+			}
+			.container .behind .sponsor{
+				width: 1220px;
+				height: 115px;
+				margin: 0px auto;
+				position: relative;
+			}
+			.container .behind .sponsor>ul{
+				display: inline-block;
+				margin-top: 30px;
+				margin-bottom: 10px;
+			}
+			.container .behind .sponsor>ul>li{
+				display: inline-block;
+				list-style: none;
+				border-right: 1px solid gainsboro;
+				padding: 0 10px;
+			}
+			.container .behind .sponsor>ul>li:nth-of-type(1){
+				padding-left: 0;
+			}
+			.container .behind .sponsor>ul>li:nth-last-of-type(1){
+				border-right: 0;
+				
+			}
+			.container .behind .sponsor>ul>li>p{
+				font-size: 12px;
+				color: dimgray;
+			}
+			.container .behind .sponsor>ul>li>a{
+				font-size: 12px;
+				text-decoration: none;
+			}
+			.container .behind .sponsor>ul>li>a:hover{
+				color: black;
+			}
+			.container .behind .sponsor>div>a{
+				font-size: 12px;
+				text-decoration: none;
+				color: gray;
+			}
+			.container .behind .sponsor>div>a>span{
+				margin-right: 10px;
+			}
+			.container .behind .sponsor .country{
+				width: 120px;
+				height: 100px;
+				position: absolute;
+				top: -50px;
+				right: 0;
+			}
+			.container .behind .sponsor .country>p{
+				display: block;
+				width: 120px;
+				height: 50px;
+				font-size: 12px;
+				text-align: center;
+				line-height: 50px;
+				position: relative;
+			}
+			.container .behind .sponsor .country>p>span:nth-child(1){
+				display: inline-block;
+				background: url(imgJG/flag_afd0e7c69a.png) no-repeat;
+				width: 15px;
+				height: 12px;
+				position: absolute;
+				top: 40%;
+				left: 20%;
+				transform: translateY(-50%,-50%);
+			}
+			.container .behind .sponsor .country>p>span:nth-child(2){
+				padding-left: 30px;
+			}
+			.container .behind .sponsor .country>p:nth-of-type(1)>span:nth-child(1){
+				background-position: 0 -30px;
+			}
+			.container .behind .sponsor .country>p:nth-child(1){
+				background-color: whitesmoke;
+				border-top-right-radius: 10px;
+				border-top-left-radius: 10px;
+				display: none;
+				transition: all 0.5s; 
+			}
+			.container .behind .sponsor .country>p:nth-child(2){
+				border-bottom-right-radius: 10px;
+				border-bottom-left-radius: 10px;
+				position: absolute;
+				top: 50px;
+			}
+			@font-face {font-family: "iconfont";
+	          src: url('font/iconfont.eot'); /* IE9*/
+	          src: url('font/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	          url('font/iconfont.woff') format('woff'), /* chrome, firefox */
+	          url('font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+	          url('font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */	
+	        }
+	        .container .behind .sponsor .country>p:nth-of-type(2)>span:nth-child(3){
+	        	 display: inline-block;
+				 font-family:"iconfont" !important;
+				 padding-left: 10px;
+				 transition: all 0.1s; 
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="header">
+				<div class="index">
+					<div>
+						<span></span>
+						<ul>
+							<li><a href="smartisan_index.html">在线商城</a></li>
+							<li><a href="jiangguopro2/jianguopro2.html">坚果 Pro 2</a></li>
+							<li><a href="pro.html">坚果 Pro</a></li>
+							<li><a href="#">Smartisan OS</a></li>
+							<li><a href="666欢喜云.html" target="_blank">欢喜云</a></li>
+							<li><a href="download.html">应用下载</a></li>
+							<li><a href="http://bbs.smartisan.com/forum.php">官方论坛</a></li>
+						</ul>
+						<div class="person">
+							<ul>
+								<li></li>
+								<li></li>
+								<li><a>0</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="titel">
+					<ul>
+						<li><a href="#">全部应用</a></li>
+						<li><a href="#">HandShaker</a></li>
+						<li><a href="#">锤子便签</a></li>
+						<li><a href="#">锤子阅读</a></li>
+						<li><a href="#">锤子科技论坛</a></li>
+						<li><a href="#">欢喜云同步工具</a></li>
+						<li><a href="#">锤子邮件</a></li>
+						<li><a href="#">更多其他应用</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="flash ">
+				<ul>
+					<li><img src="imgJG/293e917c0b3c505693f9a702548f99d5.png@78w.png" />
+						<p>锤子时钟</p>
+					</li>
+					<li><img src="imgJG/calendar-icon_6e210c4312.png" />
+						<p>锤子日历</p>
+					</li>
+					<li><img src="imgJG/launcher-icon_56a1b5e985.png" />
+						<p>锤子桌面</p>
+					</li>
+					<li><img src="imgJG/os-icon_d1f86e9b6b.png" />
+						<p>ROM 适配</p>
+					</li>
+				</ul>
+			</div>
+			<div class="slideshow">
+				<ul>
+					<li><img src="imgJG/img1.png" /></li>
+				</ul>
+			</div>
+			<div class="content">
+				<ul>
+					<li>
+						<span></span>
+						<h4>HandShaker</h4>
+						<p>在 Mac 和 Windows 电脑上也可以方便自如地
+							<br/>管理你在 Android 手机中的内容
+						</p>
+						<div class="first">
+							<div class="first_box">
+								<div>
+									<img src="imgJG/icon-handshaker-win_26adee39d1.png"/><span>下载 Windows 版安装文件</span>
+								</div>
+								<div>
+									<img src="imgJG/icon-handshaker-mac_2c24ccfc15.png"/><span>下载 Mac 版安装文件</span>
+								</div>
+								<a href="#">进一步了解 HandShaker ></a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<h4>锤子科技论坛</h4>
+						<p>是一个科技论坛
+							<br/>不只是科技论坛
+						</p>
+						<div>
+							<img src="imgJG/2934349b033b5bb571dc8c5133d3d539b600bc12.jpg"/>
+							<p>扫二维码下载锤子科技论坛</p>
+							<a href="#">进一步了解锤子科技论坛 ></a>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<h4>锤子便签</h4>
+						<p>雅致的信纸、精心调整的文字排版
+							<br/>这可能是最让人想写字的便签应用
+						</p>
+						<div>
+							<img src="imgJG/2934349b033b5bb571dc8c5133d3d539b600bc12.jpg"/>
+							<p>扫二维码下载锤子便签</p>
+							<a href="#">进一步了解锤子便签 ></a>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<h4>欢喜云同步工具</h4>
+						<p>可以将原有手机上的数据上传到欢喜云
+							<br/>然后在装有欢喜云的手机上来同步这些数据
+						</p>
+						<div>
+							<img src="imgJG/2934349b033b5bb571dc8c5133d3d539b600bc12.jpg"/>
+							<p>扫二维码下载欢喜云同步工具</p>
+							<a href="#">进一步了解欢喜云同步工具 ></a>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<h4>锤子阅读</h4>
+						<p>信息过载年代的干净阅读</p>
+						<div>
+							<img src="imgJG/2934349b033b5bb571dc8c5133d3d539b600bc12.jpg"/>
+							<p>扫二维码下载锤子阅读</p>
+							<a href="#">进一步了解锤子阅读 ></a>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<h4>锤子邮件</h4>
+						<p>简洁、易用、优雅、精美的邮件
+							<br/>让处理邮件变得便捷高效
+						</p>
+						<div>
+							<img src="imgJG/2934349b033b5bb571dc8c5133d3d539b600bc12.jpg"/>
+							<p>扫二维码下载锤子邮件</p>
+							<a href="#">进一步了解锤子邮件 ></a>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<h4>锤子时钟</h4>
+						<p>拟物化的界面风格和动画
+							<br/>让时间的流动更为鲜活生动
+						</p>
+						<div>
+							<img src="imgJG/2934349b033b5bb571dc8c5133d3d539b600bc12.jpg"/>
+							<p>扫二维码下载锤子时钟</p>
+							<a href="#">进一步了解锤子时钟 ></a>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<h4>锤子日历</h4>
+						<p>是日历，也是行事历
+							<br/>花一点时间，就可以让生活井井有条
+						</p>
+						<div>
+							<img src="imgJG/2934349b033b5bb571dc8c5133d3d539b600bc12.jpg"/>
+							<p>扫二维码下载锤子日历</p>
+							<a href="#">进一步了解锤子日历 ></a>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<h4>锤子桌面</h4>
+						<p>它示范了何为“美观、易用和人性化”</p>
+						<div>
+							<img src="imgJG/2934349b033b5bb571dc8c5133d3d539b600bc12.jpg"/>
+							<p>扫二维码下载锤子桌面</p>
+							<a href="#">进一步了解锤子桌面 ></a>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<h4>Smartisan OS ROM</h4>
+						<p>延续了 Smartisan OS 标志性的界面
+							<br/>人性化的交互体验
+						</p>
+						<div>
+							<div class="last">
+								<input type="button" value="刷机" />
+								<p>目前已适配 “一加手机 1”、“小米手机 3”、
+								<br/>“小米手机 4”、“三星 S5” 和 “Nexus 5”
+								</p>
+								<a href="#">进一步了解 Smartisan OS ROM ></a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<h4>敬请期待</h4>
+						<p>更多锤子出品应用即将发布...</p>
+					</li>
+				</ul>
+			</div>
+			<div class="behind">
+				<div class="brand">
+					<ul>
+						<h3>订单服务</h3>
+						<ul>
+							<li><a href="#">购买指南</a></li>
+							<li><a href="#">支付方式</a></li>
+							<li><a href="#">送货政策</a></li>
+						</ul>
+						
+					</ul>
+					<ul>
+						<h3>服务支持</h3>
+						<ul>
+							<li><a href="#">售后服务</a></li>
+							<li><a href="#">维修门店</a></li>
+							<li><a href="#">零售门店</a></li>
+						</ul>
+					</ul>
+					<ul>
+						<h3>自助服务</h3>
+						<ul>
+							<li><a href="#">热点咨询</a></li>
+							<li><a href="#">预约购买</a></li>
+							<li><a href="#">订单物流</a></li>
+						</ul>
+					</ul>
+					<ul>
+						<h3>媒体中心</h3>
+						<ul>
+							<li><a href="#">新闻动态</a></li>
+							<li><a href="#">官方视频</a></li>
+							<li><a href="#">图片资源</a></li>
+						</ul>
+					</ul>
+					<ul>
+						<h3>关于公司</h3>
+						<ul>
+							<li><a href="#">公司简介</a></li>
+							<li><a href="#">加入我们</a></li>
+							<li><a href="#">联系我们</a></li>
+						</ul>
+					</ul>
+					<ul>
+						<h3>关注我们</h3>
+						<ul>
+							<li><a href="#">新浪微博</a></li>
+							<li><a href="#">官方微信</a></li>
+							<li><a href="#">官方贴吧</a></li>
+						</ul>
+					</ul>
+					<div>
+						<p>400-626-5666</p>
+						<p>周一至周日 9:00-18:00（仅收市话费）</p>
+						<input type="button" value="在线帮助" />
+					</div>
+				</div>
+				<div class="sponsor">
+					<ul>
+						<li><p>Copyright © 2017, Smartisan Digital Co., Ltd. All Rights Reserved.北京锤子数码科技有限公司</p></li>
+						<li><a href="#"><p>法律声明</p></a></li>
+						<li><a href="#"><p>隐私条款</p></a></li>
+						<li><a href="#"><p>开发者中心</p></a></li>
+					</ul>
+					<div>
+						<a href="#">
+							<span>京ICP备14041720号-1</span>
+							<span>京ICP证140622号</span>
+							<span>京公网安备11010502025474</span>
+						</a>
+					</div>
+					<div class="country">
+						<p><span></span><span>English</span></p>
+						<p><span></span><span>中文</span><span>&#xe506;</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var titel = document.querySelector(".container .header .titel");
+		var flash = document.querySelector(".container .flash");
+		var li = document.querySelector(".container .header .titel>ul>li:nth-last-child(1)");
+		var img = document.querySelector(".container .slideshow>ul>li>img");
+		var p1 =document.querySelector(".container .behind .sponsor .country>p:nth-child(1)");
+		var p2 =document.querySelector(".container .behind .sponsor .country>p:nth-child(2)");
+		var span =document.querySelector(".container .behind .sponsor .country>p:nth-of-type(2)>span:nth-child(3)");
+		
+		var index =0;
+		p2.addEventListener("click",function(){ 
+			if(index%2==0){
+				p2.style.backgroundColor="darkgray";
+				p1.style.display="block";
+				span.style.transform="rotate("+180+"deg)";
+			}else{
+				p2.style.backgroundColor="white";
+				p1.style.display="none";
+				span.style.transform="rotate("+360+"deg)";
+			}
+			
+		});
+		
+		
+		li.onmousemove = function() {
+			flash.style.display = "block";
+			titel.style.borderBottom = "1px solid rgba(200,200,200,1)";
+		};
+		li.onmouseout = function() {
+			flash.style.display = "none";
+			titel.style.borderBottom = "1px solid rgba(0,0,0,0)";
+		};
+		var imgs = ["imgJG/img1.png", "imgJG/img2.png", "imgJG/img3.png"];
+		var index = 1;
+		setInterval(function() {
+			if (index == 4) {
+				index = 1;
+			}
+			img.src = imgs[(index++) - 1];
+		}, 2000);
+		
+	</script>
+
+</html>

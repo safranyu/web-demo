@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/pro-strength.css"/>
+	</head>
+	<body>
+		<div class="header-nav-after">
+			<div>
+				<span>坚果Pro</span>
+				<ul class="nav-ul">
+					<li class="new"><a href="#">概览</a></li>
+					<li><a href="#">功能</a></li>
+					<li><a href="pro-design.html">设计</a></li>
+					<li><a href="#">实力派</a></li>
+					<li><a href="#">操作系统</a></li>
+					<li><a href="#">技术规格</a></li>
+					<li><a href="#">图库</a></li>
+				</ul>
+				<a class="buy" href="#">现在购买</a>
+				<a class="recycle" href="#">手机回收置换计划</a>
+				<a class="f-number" href="#">优先购买码</a>
+			</div>
+		</div>
+		<!--暂时不做-->
+		<header>
+			<!---->
+			<div class="header-top"></div>
+			<!--下滑前导航栏-->
+			<div class="header-nav-before"></div>
+			<!--下滑后导航栏-->
+		</header>
+		
+		<section>
+			<img src="img/strength.png"/>
+		</section>
+		
+		<footer>
+			<div class="footer-top">
+				<div class="left">
+					<ul>
+						<!---->
+						<li>
+							<h3>订单服务 </h3>
+							<ul>
+								<li><a href="#">购买指南</a></li>
+								<li><a href="#">支付方式</a></li>
+								<li><a href="#">送货政策</a></li>
+							</ul>
+						</li>
+						<li>
+							<h3>服务支持 </h3>
+							<ul>
+								<li><a href="#">售后服务</a></li>
+								<li><a href="#">维修门店</a></li>
+								<li><a href="#">零售门店</a></li>
+							</ul>
+						</li>
+						<li>
+							<h3>自助服务 </h3>
+							<ul>
+								<li><a href="#">热点咨询</a></li>
+								<li><a href="#">预约购买</a></li>
+								<li><a href="#">订单物流</a></li>
+							</ul>
+						</li>
+						<li>
+							<h3>媒体中心 </h3>
+							<ul>
+								<li><a href="#">新闻动态</a></li>
+								<li><a href="#">官方视频</a></li>
+								<li><a href="#">官方视频</a></li>
+							</ul>
+						</li>
+						<li>
+							<h3>关于公司 </h3>
+							<ul>
+								<li><a href="#">公司简介</a></li>
+								<li><a href="#">加入我们</a></li>
+								<li><a href="#">联系我们</a></li>
+							</ul>
+						</li>
+						<li>
+							<h3>关注我们 </h3>
+							<ul>
+								<li><a href="#">新浪微博</a></li>
+								<li><a href="#">官方微信</a></li>
+								<li><a href="#">官方贴吧</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="right">
+					<h3>400-626-5666</h3>
+					<p>周一至周日 9:00-18:00（仅收市话费）</p>
+					<a href="#">在线帮助</a>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>
+					<b>
+						Copyright © 2017, Smartisan Digital Co., Ltd. All Rights Reserved.北京锤子数码科技有限公司
+					</b>
+						<a href="#">法律声明</a>
+					<a href="#">隐私条款</a>
+					<a href="#">开发者中心</a>
+				</p>
+				<p>
+					<a>京ICP备14041720号-1</a>
+					<a>京ICP证140622号</a>
+					<a>京公网安备11010502025474</a>
+				</p>
+			</div>
+
+		</footer>
+		<a class="back-top" href="javascript:pageScroll();"></a>
+		
+	</body>
+	<script type="text/javascript">
+		function pageScroll(){
+			window.scrollBy(0,-100);
+			scrolldelay=setTimeout('pageScroll()',10);
+			if(document.documentElement.scrollTop==0)
+				clearTimeout(scrolldelay);
+		}
+		var body = document.querySelector("body");
+		var headerNavAfter = document.querySelector(".header-nav-after");
+		var header = document.querySelector("header");
+		body.addEventListener("mousewheel",function(){
+			if(event.wheelDelta < 0){
+				header.style.display = "none";
+				headerNavAfter.style.display = "block";
+			}else {
+				if(document.documentElement.scrollTop<=100){
+					header.style.display = "block";
+					headerNavAfter.style.display = "none";
+				}
+			}
+		});
+	</script>
+</html>

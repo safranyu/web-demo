@@ -1,0 +1,493 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+	list-style: none;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+
+/*向下滑动后出现的导航栏*/
+.header-nav-after{
+	width: 100%;
+	height: 60px;
+	background: black;
+	/*background: rgba(0,0,0,0.0);*/
+	position: fixed;
+	top: 0px;
+	z-index: 2;
+	color: gainsboro;
+	border-bottom: 1px solid gainsboro;
+	display: none;
+}
+.header-nav-after>div{
+	width: 1220px;
+	height: 60px;
+	line-height: 60px;
+	margin: 0 auto;
+}
+
+.header-nav-after>div>span{
+	color: grey;
+	font-size: 20px;
+	float: left;
+}
+
+.header-nav-after>div>.nav-ul{
+	width: auto;
+	height: 60px;
+	float: left;
+	line-height: 60px;
+	margin-left: 100px;
+	/*border: 1px solid white;*/
+}
+
+.header-nav-after>div>.nav-ul>li{
+	float: left;
+	margin-left: 30px;
+}
+
+.header-nav-after>div>.nav-ul>li>a{
+	color: grey;
+	font-size: 14px;
+	opacity: 0.8;
+}
+.header-nav-after>div>.nav-ul>.new>a{
+	color: white;
+}
+.header-nav-after>div>.nav-ul>li>a:hover{
+	color: white;
+}
+
+.header-nav-after>div>a{
+	display: block;
+	color: grey;
+	font-size: 14px;
+	float: right;
+	opacity: 0.8;
+}
+/*现在购买*/
+.header-nav-after>div>.buy{
+	color: white;
+	margin-left: 40px;
+	width: 110px;
+	height: 40px;
+	margin-top: 10px;
+	text-align: center;
+	line-height: 40px;
+	background-color: #19419b;
+	/*background-color: #102b66;*/
+	border-radius: 8px;
+}
+
+.header-nav-after>div>.buy:hover{
+	background-color: #102b66;
+}
+/*回收*/
+.header-nav-after>div>.recycle{
+	padding-left: 20px;
+	border-left: 1px solid grey;
+	height: 20px;
+	margin-top: 20px;
+	line-height: 20px;
+}
+/*优购码*/
+.header-nav-after>div>.f-number{
+	margin-right: 20px;
+}
+/*现在购买、回收、优购码的hover*/
+.header-nav-after>div>a:hover{
+	color: white;
+}
+/*---------------------------------*/
+/*头部*/
+header {
+	width: 100%;
+	height: 140px;
+	background-color: #1a1a1a;
+	position: relative;
+	position: fixed;
+	top: 0px;
+	z-index: 2;
+}
+
+header nav {
+	width: 1220px;
+	height: 100px;
+	margin: 0 auto;
+	padding-top: 20px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+header nav>span {
+	display: block;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	transform: translateY(5px);
+	float: left;
+}
+
+header nav>span>img {
+	width: 50px;
+}
+header nav>div {
+	width: 750px;
+	height: 50px;
+	line-height: 50px;
+	margin-left: 200px;
+	position: relative;
+}
+header nav>div>a {
+	text-decoration: none;
+	margin-left: 35px;
+	font-size: 16px;
+	color: darkgrey;
+	float: left;
+}
+header nav>div>a:nth-of-type(1) {
+	color: white;
+}
+header nav>div>a:hover {
+	color: white;
+}
+header nav>div>span {
+	display: block;
+	width: 1px;
+	height: 20px;
+	background-color: grey;
+	float: left;
+	position: relative;
+	top: 17px;
+	left: 50px;
+}
+header .header_bot {
+	width: 100%;
+	height: 40px;
+	background-color: #1A1A1A;
+	border-top: 1px solid gray;
+}
+header .header_bot>div {
+	width: 1220px;
+	height: 40px;
+	margin: 0 auto;
+}
+header .header_bot>div>ul{
+	float: left;
+	height: 40px;
+	line-height: 40px;
+}
+header .header_bot>div>ul>li {
+	margin-left: 20px;
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+header .header_bot>div>ul>li:nth-child(1) {
+	margin-left: 0px;
+}
+header .header_bot>div>ul>li>a {
+	color: grey;
+	font-size: 13px;
+}
+header .header_bot>div>ul>li:hover a {
+	color: white;
+}
+header .header_bot>div>a{
+	float: right;
+}
+/*现在购买*/
+header .header_bot>div>.buy {
+	color: white;
+	margin-left: 40px;
+	width: 100px;
+	height: 30px;
+	margin-top: 5px;
+	text-align: center;
+	line-height: 30px;
+	background-color: #19419b;
+	border-radius: 5px;
+}
+header .header_bot>div>.buy:hover {
+	background-color: #102b66;
+}
+/*回收*/
+header .header_bot>div>.recycle {
+	color: grey;
+	font-size: 13px;
+	padding-left: 15px;
+	border-left: 1px solid grey;
+	height: 15px;
+	margin-top: 13px;
+	line-height: 15px;
+}
+/*优购码*/
+header .header_bot>div>.f-number {
+	color: grey;
+	font-size: 13px;
+	margin-right: 20px;
+	height: 15px;
+	margin-top: 13px;
+	line-height: 15px;
+}
+/*现在购买、回收、优购码的hover*/
+header .header_bot a:hover {
+	color: white;
+}
+header .header_bot .new a{
+	color: white;
+}
+/*---------------------------------------------*/
+section{
+	width: 100%;
+	height: 100%;
+	background: #151515;
+	position: relative;
+	overflow: hidden;
+}
+section>ul{
+	position: absolute;
+	right: 40px;
+	top: 90px;
+	z-index: 2;
+	display: none;
+}
+section>ul>li{
+	height: 15px;
+	text-align: right;
+	margin-bottom: 10px;
+}
+section>ul>li>span{
+	display: block;
+	width: 8px;
+	height: 8px;
+	background-color: darkgrey;
+	border-radius: 4px;
+	margin-top: 3.5px;
+	float: right;
+	margin-left: 5px;
+}
+section>ul>li>b{
+	display: none;
+	font-size: 13px;
+	font-weight: 100;
+	color: grey;
+	opacity: 0.5;
+	float: right;
+}
+section>ul>li:hover span{
+	background-color: lawngreen;
+}
+section>ul>li:hover b{
+	display: inline;
+}
+/*-----------------------*/
+section>.all{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	transition: all 1s;
+	transition-timing-function: cubic-bezier(1,0.1,0.1,1);
+	transform: translateY(0);
+}
+/*-------------------------*/
+section>.all>.black-1-loop{
+	width: 100%;
+	height: 850px;
+	margin-top: 140px;
+	position: relative;
+	animation: transparency 5s 1;	
+}
+section>.all>.black-1-loop>.bg{
+	width: 100%;
+	height: 100%;
+}
+section>.all>.black-1-loop>.left{
+	width: 20%;
+	position: absolute;
+	left: 20%;
+	bottom: 0%;
+	transition: all 3s;
+	transition-timing-function: cubic-bezier(0.5,0.3,0.3,0.5);
+}
+section>.all>.black-1-loop>.right{
+	width: 20%;
+	position: absolute;
+	right: 20%;
+	top: -20%;
+	transition: all 3s;
+	transition-timing-function: cubic-bezier(0.5,0.3,0.3,0.5);
+}
+/*--------------------------------*/
+section>.all>.red-loop{
+	width: 100%;
+	height: 800px;
+	position: relative;
+	animation: transparency 5s 1;
+	overflow: hidden;
+}
+section>.all>.red-loop>.bg{
+	width: 100%;
+	height: 100%;
+}
+section>.all>.red-loop>.left{
+	width: 38%;
+	position: absolute;
+	left:5%;
+	bottom: -30%;
+	transition: all 3s;
+	transition-timing-function: cubic-bezier(0.5,0.3,0.3,0.5);
+}
+section>.all>.red-loop>.right{
+	width: 38%;
+	position: absolute;
+	right: 0%;
+	top: -30%;
+	transition: all 3s;
+	transition-timing-function: cubic-bezier(0.5,0.3,0.3,0.5);
+}
+/*--------------------------------*/
+section>.all>.black-2-loop{
+	width: 100%;
+	height: 800px;
+	position: relative;
+	animation: transparency 5s 1;
+	overflow: hidden;	
+}
+section>.all>.black-2-loop>.bg{
+	width: 100%;
+	height: 100%;
+}
+section>.all>.black-2-loop>.left{
+	width: 50%;
+	position: absolute;
+	left:0%;
+	bottom: -10%;
+	transition: all 3s;
+	transition-timing-function: cubic-bezier(0.5,0.3,0.3,0.5);
+}
+section>.all>.black-2-loop>.right{
+	width: 50%;
+	position: absolute;
+	right: 0%;
+	top: -10%;
+	transition: all 3s;
+	transition-timing-function: cubic-bezier(0.5,0.3,0.3,0.5);
+}
+
+
+
+/*底部*/
+footer{
+	width: 100%;
+	height: 350px;
+	background: white;
+	border-top: 1px solid gainsboro;
+	display: none;
+}
+footer>.footer-top{
+	width: 1225px;
+	height: 235px;
+	margin: 0 auto;
+	border-bottom: 1px solid gray;
+}
+footer>.footer-top>.left{
+	float: left;
+	width: 800px;
+	height: 100px;
+	margin-top: 100px;
+}
+footer>.footer-top>.left>ul{
+	width: 800px;
+	height: 100px;
+}
+footer>.footer-top>.left>ul>li{
+	float: left;
+	width: 50px;
+	height: 100px;
+	margin-right: 100px;
+}
+footer>.footer-top>.left>ul>li:last-child{
+	margin-right: 0px;
+}
+footer>.footer-top>.left>ul>li>h3{
+	color: darkgray;
+	font-size: 12px;
+	padding-bottom: 20px;
+}
+footer>.footer-top>.left>ul>li>ul>li>a{
+	color: darkgrey;
+	font-size: 12px;
+	padding-bottom: 20px;
+}
+
+footer>.footer-top>.right{
+	float: right;
+	margin-top: 100px;
+	text-align: right;
+}
+footer>.footer-top>.right>h3{
+	color: grey;
+	font-size: 30px;
+}
+footer>.footer-top>.right>p{
+	color: gainsboro;
+	font-size: 13px;
+}
+footer>.footer-top>.right>a{
+	display: block;
+	width: 105px;
+	height: 30px;
+	margin-top: 10px;
+	line-height: 30px;
+	text-align: center;
+	float: right;
+	border: 1px solid gray;
+	border-radius: 5px;
+	background-color: ghostwhite;
+}
+footer>.footer-bottom{
+	width: 1225px;
+	height: 60px;
+	padding-top: 40px;
+	margin: 0 auto;
+}
+footer>.footer-bottom>p{
+	margin-bottom: 10px;
+}
+footer>.footer-bottom>p>b{
+	display: block;
+	float: left;
+	color: gray;
+	font-size: 12px;
+	padding-right: 15px;
+	border-right: 1px solid gray;
+}
+footer>.footer-bottom>p>a{
+	margin: 0 10px;
+}
+footer>.footer-bottom>p{
+	color: gray;
+	font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

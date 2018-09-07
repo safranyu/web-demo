@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>欢喜云-锤子科技</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body,
+			html {
+				width: 100%;
+				height: 100%;
+				background-image: url(HXY/pattern_dc2161cd93.jpg );
+			}
+			/*头*/
+			
+			.header {
+				height: 62px;
+				border-bottom: 1px #d2d2d2 solid;
+				background: #FFFFFF;
+			}
+			
+			.header .three {
+				margin-top: 23px;
+				margin-left: 24px;
+				/*border: 1px solid blue;*/
+				height: 15px;
+				width: 21px;
+				float: left;
+				cursor: pointer/*鼠标变为手指*/
+				;
+				position: relative;
+			}
+			
+			.header .three>span {
+				width: 21px;
+				height: 3px;
+				background: #7e7e7e;
+				border-radius: 2px;
+				left: 0;
+				position: absolute;
+			}
+			
+			.header .three .brick1 {
+				top: 0;
+			}
+			
+			.header .three .brick2 {
+				top: 6px;
+				box-shadow: inset rgba(255, 255, 255, .2) 0 -1px 1px;
+			}
+			
+			.header .three .brick3 {
+				top: 12px;
+				box-shadow: inset rgba(255, 255, 255, .2) 0 -2px 2px;
+			}
+			
+			h1 {
+				height: 61px;
+				font-size: 22px;
+				line-height: 61px;
+				float: left;
+				padding-left: 20px;
+				color: #8a8a8a;
+				cursor: pointer
+			}
+			/*中间 container=====================*/
+			
+			.container {
+				/*width: 100%;*/
+				/*height: 100%;*/
+				/*background-image: url(HXY/pattern_dc2161cd93.jpg );*/
+			}
+			
+			.center {
+				position: absolute;
+				top: 20%;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 630px;
+				height: 480px;
+				background: url(HXY/desk_nosign_small_c131cc2fa9.png )no-repeat top center;
+			}
+			
+			.container .center .center_title {
+				margin-top: 200px;
+				text-align: center;
+				line-height: 66px;
+				font-size: 36px;
+				color: #8A8A8A;
+				padding-top: 20px;
+			}
+			
+			.container .center .center_text {
+				font-size: 16px;
+				margin-top: 10px;
+				text-align: center;
+				line-height: 28px;
+				color: #b1b1b1;
+			}
+			
+			.container .center .center_btn input[type=button] {
+				margin-top: 30px;
+				height: 50px;
+				width: 200px;
+				cursor: pointer;
+				margin-left: 210px;
+				border-radius: 6px;
+				padding: 2px;
+				background-color: #6d94e0;
+				outline: none;
+				font-size: 16px;
+				color: white;
+			}
+			
+			.container .center .center_btn .btn_now:hover {
+				background-color: #5584f4;
+			}
+			
+			.container .center .center_other {
+				height: 24px;
+				margin-top: 13px;
+				text-align: center;
+			}
+			
+			.container .center .center_other a {
+				font-size: 12px;
+				color: #b1b1b1;
+				text-decoration: none;
+			}
+			
+			.container .center .center_other .center_otherSplit {
+				display: inline-block;
+				vertical-align: top;
+				height: 12px;
+				width: 2px;
+				margin: 6px 5px 0 5px;
+				background: #ccc;
+			}
+			/*底部footer=====================*/
+			
+			.footer {
+				width: 100%;
+				height: 30px;
+				/*background: url(HXY/pattern_dc2161cd93.jpg);*/
+				border-top: 1px solid silver;
+				text-align: center;
+				position: absolute;
+				bottom: 0;
+			}
+			
+			.footer .footer_text {
+				font-size: 12px;
+				color: #b1b1b1;
+			}
+			
+			.footer .footer_split01 {
+				background: #ccc;
+				margin: 6px 5px 0px 5px;
+				display: inline-block;
+				vertical-align: top;
+				width: 2px;
+				height: 12px;
+			}
+			
+			.footer .footer_split02 {
+				background: #ccc;
+				margin: 6px 5px 0px 5px;
+				display: inline-block;
+				vertical-align: top;
+				width: 2px;
+				height: 12px;
+			}
+			
+			.footer a {
+				font-size: 12px;
+				color: #84a3e3;
+				text-decoration: none;
+			}
+			/*滑动==================================*/
+			
+			.slide {
+				width: 200px;
+				height: 100%;
+				/*border: 1px solid black;*/
+				background-color: white;
+				top: 0;
+				left: -200px;
+				position: absolute;
+				/*z-index: 1;*/
+				z-index: 999;
+				/*display: none;*/
+			}
+			
+			.slide .slide_1 {
+				width: 200px;
+				height: 100px;
+				background: url(HXY/cloud-narrow_31a252c020.png) no-repeat center;
+				margin-top: 20px;
+			}
+			
+			.slide .slide_2 {
+				width: 200px;
+				height: 100px;
+				background: url(HXY/contact-narrow_685ae528e7.png) no-repeat center;
+			}
+			
+			.slide .slide_3 {
+				width: 200px;
+				height: 100px;
+				background: url(HXY/note-narrow_123d740688.png) no-repeat center;
+			}
+			
+			.slide .slide_4 {
+				width: 200px;
+				height: 100px;
+				background: url(HXY/find-narrow_ff75fc63af.png) no-repeat center;
+			}
+			/*这里用bottom下不来,文本的写法是要给一个宽高   然后padding一样*/
+			
+			.slide a {
+				text-decoration: none;
+			}
+			
+			.slide p {
+				margin: 0 auto;
+				padding-top: 35px;
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				color: #8a8a8a;
+				font-size: 15px;
+			}
+			
+			.slide input[type=button] {
+				width: 180px;
+				height: 45px;
+				border-radius: 7px;
+				background: #f8f8f8;
+				border: 1px solid #8a8a8a;
+				color: #8a8a8a;
+				font-size: 17px;
+				position: absolute;
+				left: 10px;
+				bottom: 10px;
+			}
+			
+			.slide .btn:hover {
+				background-color: blanchedalmond;
+			}
+			/*老师吊  强制顶上去*/
+			
+			.quanbu {
+				width: 100%;
+				height: 100%;
+				/*border: 2px solid black;*/
+				top: 0;
+				left: 0;
+				position: absolute;
+				background-color: #000000;
+				z-index: 99;
+				opacity: 0.5;
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="header">
+
+			<div class="three">
+				<span class="brick1"></span>
+				<span class="brick2"></span>
+				<span class="brick3"></span>
+			</div>
+			<h1>欢喜云</h1>
+
+		</div>
+		<div class="slide">
+			<a href="#">
+				<div class="slide_1">
+					<p>欢喜云首页</p>
+				</div>
+			</a>
+
+			<a href="#">
+				<div class="slide_2">
+					<p>联系人</p>
+				</div>
+			</a>
+
+			<a href="#">
+				<div class="slide_3">
+					<p>便签</p>
+				</div>
+			</a>
+
+			<a href="#">
+				<div class="slide_4">
+					<p>查找手机</p>
+				</div>
+			</a>
+
+			<input type="button" class="btn" value="登录" />
+
+		</div>
+
+		<div class="container">
+			<div class="center">
+				<div class="center_title">Smartisan 欢喜云服务</div>
+				<div class="center_text">
+					你可以通过本人专属 Smartisan ID 登录网页版欢喜云
+					<br>在电脑端也能轻松管理和同步你的联系人、便签和查找手机的功能
+				</div>
+				<div class="center_btn">
+					<input type="button" class="btn_now" value="现在登录" />
+					<a href="#"></a>
+				</div>
+
+				<div class="center_other">
+					<a href="#" target="_blank">注册新用户</a>
+					<span class="center_otherSplit"></span>
+					<a href="#" target="_blank">下载欢喜云同步工具</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<span class="footer_text">Copyright © 2017, Smartsian Digital Co., Ltd. All Rights Reserved. 北京锤子数码科技有限公司</span>
+			<span class="footer_split01"></span>
+			<a href="#" target="_blank"> 法律声明</a>
+			<span class="footer_split02"></span>
+			<a href="#" target="_blank"> 隐私条款</a>
+		</div>
+
+		<div class="quanbu">
+		</div>
+
+	</body>
+
+	<script type="text/javascript">
+		var slide = document.querySelector(".slide");
+		var three = document.querySelector(".three");
+		var h1 = document.querySelector("h1");
+		var quanbu = document.querySelector(".quanbu");
+		three.onmouseenter = function() {
+			slide.style.left = "0px"
+			slide.style.transition = "all 0.3s";
+			quanbu.style.display = "block";
+			//			console.log(quanbu);
+		}
+		h1.onmouseenter = function() {
+			slide.style.left = "0px"
+			slide.style.transition = "all 0.3s";
+			quanbu.style.display = "block";
+		}
+		slide.onmouseleave = function() {
+			slide.style.left = "-200px"
+			quanbu.style.display = "none";
+		}
+	</script>
+
+</html>

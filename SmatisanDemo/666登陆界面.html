@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登陆</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body,
+			html {
+				width: 100%;
+				background: #F0F0F0;
+			}
+			
+			.entire {
+				width: 100%;
+				height: 100%;
+				/*border: 1px solid black;*/
+				background: #F0F0F0;
+			}
+			
+			.container {
+				width: 450px;
+				height: 550px;
+				margin: 70px auto;
+				/*border: 1px solid black;*/
+				box-shadow: 1px 1px 20px #ccc;
+				background: white;
+				border-radius: 10px;
+			}
+			
+			.container .container_top {
+				width: 450px;
+				height: 240px;
+				top: 0;
+				/*border: 1px solid blue;*/
+			}
+			
+			.container .container_top>img {
+				padding-left: 143px;
+				padding-top: 26px;
+			}
+			
+			.container .container_top>p {
+				line-height: 1px;
+				text-align: center;
+				margin: 0 auto;
+				font-weight: 400;
+				font-size: 20px;
+				color: #333;
+			}
+			
+			.container .container_bottom>div {
+				width: 370px;
+				height: 50px;
+				margin: 0 auto;
+				border: 1px solid #ccc;
+				position: relative;
+				border-radius: 5px;
+				opacity: 0.5;
+			}
+			
+			.container .container_bottom .input_passw {
+				margin-top: 15px;
+			}
+			
+			.container .container_bottom .input_user {
+				margin-top: 5px;
+			}
+			
+			.container .container_bottom input[type=text] {
+				font-size: 15px;
+				height: 50px;
+				width: 320px;
+				border: none;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+			
+			.container .container_bottom ul {
+				width: 46px;
+				height: 50px;
+				border: none;
+				border-right: 1px solid #ccc;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			.container .container_bottom ul>li {
+				display: block;
+				list-style: none;
+				height: 50px;
+				width: 46px;
+			}
+			
+			.container .container_bottom .list1>li {
+				background-image: url(Smartisan/e7e327a2b8.png);
+				background-position: -3px 0px;
+			}
+			
+			.container .container_bottom .list2>li {
+				background-image: url(Smartisan/e7e327a2b8.png);
+				background-position: -50px 0px;
+			}
+			
+			.container .container_landing .container_landing_top {
+				height: 22px;
+				width: 370px;
+				/*border: 1px solid black;*/
+				margin: 15px auto;
+				position: relative;
+			}
+			
+			.container .container_landing .container_landing_top> li {
+				width: 19px;
+				height: 16px;
+				list-style: none;
+				background: url(Smartisan/f49f6e4acf.png);
+				/*background-position-y: -10px;*/
+			}
+			
+			.container .container_landing {
+				/*border: 1px solid black;*/
+				width: 450px;
+				height: 136px;
+				position: relative;
+			}
+			
+			.container .container_landing a {
+				text-decoration: none;
+				font-size: 10px;
+				float: left;
+			}
+			
+			.container .container_landing .landing1 {
+				top: 0;
+				right: 293px;
+				position: absolute;
+				color: #B1B1B1;
+			}
+			
+			.container .container_landing .landing2 {
+				top: 0;
+				right: 74px;
+				position: absolute;
+			}
+			
+			.container .container_landing .landing3 {
+				top: 0;
+				right: 0;
+				position: absolute;
+			}
+			
+			.container .container_landing input[type=button] {
+				width: 370px;
+				height: 45px;
+				background-color: #6f97e5;
+				bottom: 50px;
+				left: 42px;
+				position: absolute;
+				border-radius: 8px;
+				opacity: 0.4;
+				font-size: 18px;
+				color: white;
+			}
+			
+			.line {
+				height: 1px;
+				width: 370px;
+				background-color: #CCCCCC;
+				margin: 90px auto;
+				opacity: 0.7;
+			}
+			
+			.container .container_foot{
+				height: 17px;
+				width: 370px;
+				/*border: 1px solid black;*/
+				margin: 0px auto;
+				position: relative;
+			}
+			
+			.container .container_foot>p{
+				font-size: 10px;
+				color: #B1B1B1;
+			}
+			.container_foot .p1{
+				right: 0;
+				top: 0;
+				position: absolute;
+				cursor: pointer
+			}
+			.container_foot .p1:hover{
+				color: blue;
+				transition: all 1s;
+			}
+			
+			.UL_footer{
+				
+				width: 81px;
+				height:17px ;
+				/*border: 1px solid blue;*/
+				left: 93px;
+				top: 0;
+				position: absolute;
+			}
+			
+			.UL_footer li{
+				list-style: none;
+				float: left;
+				background: url(Smartisan/icons_86423c6fdc.png);
+				height: 17px;
+			}
+			
+			.UL_footer li:hover{
+				background: url(Smartisan/icons-hover_b6e43698ad.png);
+			}
+			
+			.UL_footer li:nth-child(1){
+				width: 18px;
+				
+			}
+			
+			.UL_footer li:nth-child(2){
+				width: 40px;
+				background-position: -18px;
+			}
+			
+			.UL_footer li:nth-child(3){
+				width: 21px;
+				background-position: -58px;
+			}
+			
+			.footer{
+				width: 100%;
+				height: 100px;
+				bottom: 0;
+				/*border: 1px solid black;*/
+				text-align: center;
+			}
+			.footer_top{
+				height: 15px;
+				width: 680px;
+				/*border: 1px solid blue;*/
+				top: 0;
+				text-align: center;
+				margin: auto;
+				
+			}
+			
+			
+			.footer_top>p{
+				float: left;
+				font-size: 12px;
+				padding-right: 10px;
+				color: #BC8F8F;
+			}
+			.footer_top>a{
+				display: block;
+				
+				line-height: 10px;
+				margin-top: 3px;
+				font-size: 10px;
+				text-decoration: none;
+				float: left;
+				padding: 0 10px;
+				border-left: 1px solid black;
+				color: #5079d;
+			}
+			.footer>a{
+				font-size: 10px;
+				text-decoration: none;
+				margin: 0 auto;
+				display: block;
+				padding: 11px;
+				color: #5079d;
+			}
+			
+			
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="entire">
+			<div class="container">
+				<div class="container_top">
+					<img src="Smartisan/smartisan_4ada7fecea.png" />
+					<p>使用 Smartisan ID 登录官网</p>
+
+				</div>
+				<div class="container_bottom">
+					<div class="input_user">
+						<ul class="list1">
+							<li> </li>
+						</ul>
+						<input type="text" class="text_user" placeholder=" 手机号/邮箱" />
+					</div>
+
+					<div class="input_passw">
+						<ul class="list2">
+							<li></li>
+						</ul>
+						<input type="text" class="text_passw" placeholder=" 密码" />
+					</div>
+
+				</div>
+				<div class="container_landing">
+					<div class="container_landing_top">
+						<li></li>
+						<a class="landing1" href="#">自动登录</a>
+						<a class="landing2" href="#">注册 Smartisan ID</a>
+						<a class="landing3" href="#">忘记密码？</a>
+					</div>
+
+					<input type="button" name="" class="btn_landing" value="登陆"  onClick="location.href='smartisan_index.html'"/>
+					<div class="line">
+					</div>
+				</div>
+
+				<div class="container_foot">
+					<p>其他账号登录：</p>
+					<ul class="UL_footer">
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<p class="p1">国际手机号登录&gt;</p>
+				</div>
+			</div>
+
+		<div class="footer">
+			<div class="footer_top">
+				<p>Copyright © 2017, Smartisan Digital Co., Ltd. All Rights Reserved.北京锤子数码科技有限公司</p>
+				<a href="#">法律声明</a>
+				<a href="#">隐私条款</a>
+			</div>
+			
+			<a href="#">京ICP备14041720号-1京ICP证140622号京公网安备11010502025474</a>
+		</div>
+
+
+		</div>
+	</body>
+	<script type="text/javascript">
+		var input_user = document.querySelector(".input_user");
+		var input_passw = document.querySelector(".input_passw");
+		var p_bj = document.getElementById("#p1");
+		var obj = document.getElementById("p1");
+		
+		
+		p_bj.onclick = function(){
+			obj.innerHTML = "普通登录";
+		}
+		
+		input_user.onmousemove = function() {
+			input_user.style.opacity = "1";
+			input_user.style.transition = "1s";
+		}
+		input_user.onmouseleave = function() {
+			input_user.style.opacity = "0.5";
+			input_user.style.transition = "1s";
+		}
+		input_passw.onmousemove = function() {
+			input_passw.style.opacity = "1";
+			input_passw.style.transition = "1s";
+		}
+		input_passw.onmouseleave = function() {
+			input_passw.style.opacity = "0.5";
+			input_passw.style.transition = "1s";
+		}
+	</script>
+
+</html>
