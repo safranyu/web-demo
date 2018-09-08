@@ -1,0 +1,20 @@
+
+
+//less没有循环语法
+//使用函数的迭代 死循环
+//根据数组的长度去停止当前循环
+//给函数执行附加条件
+//需要序号来判断 通过序号遍历 @index 1开始
+.adapterMixin(@index) when(@index > 0){
+  @media (min-width:extract(@adapterDeviceList,@index)){
+    html{
+      font-size: @baseFontSize / @psdWidth * extract(@adapterDeviceList,@index);
+    }
+  }
+  //@media(max-width:320px){
+  //  html{
+  //    font-size: @baseFontSize;
+  //  }
+  //}
+  .adapterMixin(@index - 1);
+}
